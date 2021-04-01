@@ -1,0 +1,81 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Courses/CPEN311/Ebi/Labs/CPEN311_LAB_4/sim
+vFDC
+Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z1 !s110 1617319438
+!i10b 1
+!s100 4afNE`dWof<^j2GE>7T]31
+I[S8`XYN4_JkWg?b8[N7AT3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 Nbit_register_async_reset_sv_unit
+S1
+Z3 dE:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim
+w1613372146
+8E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+FE:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+L0 2
+Z4 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1617319438.851000
+!s107 E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
+!i113 1
+Z5 o-work work -sv
+n@f@d@c
+vlsfr
+R0
+R1
+!i10b 1
+!s100 Yi^8>oYFeEZLOBMP?@2ae0
+ICKUaD6gEjBEIG25C9nQ5O2
+R2
+!s105 lsfr_sv_unit
+S1
+R3
+w1617319376
+8E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
+FE:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1617319438.719000
+!s107 E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv|
+!i113 1
+R5
+vlsfr_TB
+R0
+R1
+!i10b 1
+!s100 R4zM6[@famhdP6j6AYUTJ2
+IFnlbGT4NSddFSHieG1]XV0
+R2
+!s105 lsfr_TB_sv_unit
+S1
+R3
+w1617319420
+8E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv
+FE:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1617319438.785000
+!s107 E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv|
+!i113 1
+R5
+nlsfr_@t@b

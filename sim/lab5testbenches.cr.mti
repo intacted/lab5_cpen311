@@ -1,0 +1,15 @@
+E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module FDC
+
+Top level modules:
+	FDC
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module lsfr
+
+Top level modules:
+	lsfr
+
+} {} {}}
