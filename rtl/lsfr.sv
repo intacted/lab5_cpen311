@@ -10,12 +10,20 @@ module lsfr
 	wire [4:0] lsfr_wire;
 	parameter [4:0] lsfr_init = 5'b000_01;
 	
-	wire feedback;
+	wire feedback, feedback_stable;
 	
 	assign feedback = lsfr_reg0[0] ^ lsfr_reg0[2];
 	assign q = lsfr_reg0;
 
 	assign lsfr_wire = reset ? lsfr_init : lsfr_reg0;
+
+	FDC #(1) metastability_handler 
+	(
+		.clk(clk),
+		.reset(/*EMPTY*/),
+		.d(feedback),
+		.q(feedback_stable)
+	);
 	
 	FDC #(1) ff3 
 	(
@@ -53,7 +61,7 @@ module lsfr
 	(
 		.clk(clk),
 		.reset(/*EMPTY*/),
-		.d(feedback),
+		.d(feedback_stable),
 		.q(lsfr_reg0[4])
 	);
 	

@@ -24,6 +24,7 @@ module lsfr_TB;
 			reset <= 1'b1;
 
 			#clock_scale;
+			#clock_scale;
 			
 			assert(q === 5'b000_01) else $error("Problem at 0");
 			reset <= 1'b0;
