@@ -7,16 +7,21 @@ module lsfr
 	 );
 	 
 	reg [4:0] lsfr_reg0;
+	wire [4:0] lsfr_wire;
+	parameter [4:0] lsfr_init = 5'b000_01;
+	
 	wire feedback;
 	
 	assign feedback = lsfr_reg0[0] ^ lsfr_reg0[2];
 	assign q = lsfr_reg0;
+
+	assign lsfr_wire = reset ? lsfr_init : lsfr_reg0;
 	
 	FDC #(1) ff3 
 	(
 		.clk(clk),
 		.reset(/*EMPTY*/),
-		.d(lsfr_reg0[4]),
+		.d(lsfr_wire[4]),
 		.q(lsfr_reg0[3])
 	);
 	
@@ -24,7 +29,7 @@ module lsfr
 	(
 		.clk(clk),
 		.reset(/*EMPTY*/),
-		.d(lsfr_reg0[3]),
+		.d(lsfr_wire[3]),
 		.q(lsfr_reg0[2])
 	);
 	
@@ -32,7 +37,7 @@ module lsfr
 	(
 		.clk(clk),
 		.reset(/*EMPTY*/),
-		.d(lsfr_reg0[2]),
+		.d(lsfr_wire[2]),
 		.q(lsfr_reg0[1])
 	);
 	
@@ -40,8 +45,8 @@ module lsfr
 	(
 		.clk(clk),
 		.reset(/*EMPTY*/),
-		.d(lsfr_reg0[1]),
-		.q()
+		.d(lsfr_wire[1]),
+		.q(lsfr_reg0[0])
 	);
 	
 	FDC #(1) ff4 
