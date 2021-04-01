@@ -73,6 +73,8 @@ begin
 -- Phase accumulator increments by 'phase_inc' every clock cycle        --
 -- Output frequency determined by formula: Phase_inc = (Fout/Fclk)*2^32 --
 -- E.g. Fout = 36MHz, Fclk = 100MHz,  Phase_inc = 36*2^32/100           --
+-- lab 5 freq
+-- phase_inc = 3hz=
 -- Frequency resolution is 100MHz/2^32 = 0.00233Hz                      --
 --------------------------------------------------------------------------
 

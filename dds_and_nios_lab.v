@@ -334,6 +334,17 @@ DE1_SoC_QSYS U0(
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_modulation;
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
 
+//create a waveform gen
+waveform_gen wavegen (
+	.clk(CLOCK_50),
+	.reset() ,//reset key unknown
+	.en() ,//enable
+	.phase_inc(32'h7AE147B),
+	.sin_out(),
+	.cos_out(),
+	.squ_out(),
+	.saw_out()
+)
 
 ////////////////////////////////////////////////////////////////////
 // 
