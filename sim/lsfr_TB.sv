@@ -7,13 +7,14 @@ module lsfr_TB;
 	logic [4:0] q;
 
 	// -- clock and reset signals  
-	logic clk, reset;										
+	logic clk, reset, reset_ff;										
 	 
-	lsfr dut(
+	lsfr_generic dut(
 		// Inputs
 		.clk(clk),
 		.reset(reset),
-		
+		//.reset_ff(reset_ff),
+
 		// Outputs
 		.q(q)
 	);
@@ -21,12 +22,19 @@ module lsfr_TB;
 
 	initial
 		begin
-			reset <= 1'b1;
+			//reset <= 1'b1;
+
+			reset <= 1'b0;
+			//reset_ff <= 1'b1;
+
+			#clock_scale;
+
+			//reset_ff <= 1'b0;
+			reset <= 1'b0;
 
 			#clock_scale;
 			
 			assert(q === 5'b000_01) else $error("Problem at 0");
-			reset <= 1'b0;
 
 			#clock_scale;
 
@@ -38,8 +46,8 @@ module lsfr_TB;
 	
 	always
 		begin
-			clk <=1; #(clock_scale/2);
 			clk <=0; #(clock_scale/2);
+			clk <=1; #(clock_scale/2);
 		end
 
 endmodule
