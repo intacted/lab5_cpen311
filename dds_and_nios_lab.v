@@ -333,18 +333,35 @@ DE1_SoC_QSYS U0(
 	
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_modulation;
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
+logic [5]LSFR_out;
+logic CLOCK_1;
 
+clock_divider clk_divide_1MHZ(
+	.inclk(CLOCK_50), 			// Put in CLK_50M
+	.outclk(CLOCK_1), 		
+	.outclk_Not, 
+	.div_clk_count(),  	// Half-period tick count for frequency
+	.Reset()
+);
 //create a waveform gen
 waveform_gen wavegen (
 	.clk(CLOCK_50),
 	.reset() ,//reset key unknown
-	.en() ,//enable
-	.phase_inc(32'h7AE147B),
-	.sin_out(),
-	.cos_out(),
-	.squ_out(),
-	.saw_out()
-)
+	.en(LSFR_out[0]) ,//enable
+	.phase_inc(32'd258),
+	.sin_out(sin_wave),
+	.cos_out(cos_wave),
+	.squ_out(squ_wave),
+	.saw_out(saw_wave)
+);
+
+//LSFR generator
+lsfr_generic lsfr(
+	.clk(CLOCK_1),
+	.reset(),
+	.q(LSFR_out)
+	
+);
 
 ////////////////////////////////////////////////////////////////////
 // 
