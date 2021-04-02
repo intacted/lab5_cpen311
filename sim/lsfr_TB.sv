@@ -9,7 +9,7 @@ module lsfr_TB;
 	// -- clock and reset signals  
 	logic clk, reset;										
 	 
-	lsfr dut(
+	lsfr_generic dut(
 		// Inputs
 		.clk(clk),
 		.reset(reset),
@@ -39,8 +39,8 @@ module lsfr_TB;
 	
 	always
 		begin
-			clk <=1; #(clock_scale/2);
 			clk <=0; #(clock_scale/2);
+			clk <=1; #(clock_scale/2);
 		end
 
 endmodule
