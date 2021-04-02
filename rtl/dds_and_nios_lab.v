@@ -333,9 +333,9 @@ DE1_SoC_QSYS U0(
 	
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_modulation;
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
-logic [4:0]LSFR_out;
+logic [5:0]LSFR_out;
 logic CLOCK_1;
-logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave;
+logic [11:0] 
 
 clock_divider clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
@@ -348,19 +348,13 @@ clock_divider clk_divide_1MHZ(
 waveform_gen wavegen (
 	.clk(CLOCK_50),
 	.reset() ,//reset key unknown
-	.en() ,//enable
+	.en(LSFR_out[0]) ,//enable
 	.phase_inc(32'd258),
-	.sin_out(sin_wave),
-	.cos_out(cos_wave),
-	.squ_out(squ_wave),
-	.saw_out(saw_wave)
+	.sin_out(),
+	.cos_out(),
+	.squ_out(),
+	.saw_out()
 );
-
-mux4to1 wave_sel(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave)	.sel(),	.out(sel_wave));
-
-assign ask=LSFR_out[0]:sel_wave?12'b0;
-
-assign	BPSK=LSFR_out[0]:(~sel_wave+1)?sel_wave;
 
 //LSFR generator
 lsfr_generic lsfr(
