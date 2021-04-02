@@ -20,8 +20,7 @@ module lsfr_generic
 
 	genvar i;
 	generate
-		for (i = N-1; i > 0; i--) 
-		begin
+		for (i = N-1; i > 0; i--) begin : flip_flops
 			FDC #(1) ff
 			(
 				.clk(clk),
