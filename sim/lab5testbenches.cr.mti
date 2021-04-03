@@ -5,20 +5,18 @@ Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
 Top level modules:
 	FDC
 
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none {E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv}
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module clock_divider_TB
+
+Top level modules:
+	clock_divider_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv
 Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling module lsfr_TB
 
 Top level modules:
 	lsfr_TB
-
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
--- Compiling module lsfr_generic
--- Compiling module lsfr
-
-Top level modules:
-	lsfr_generic
-	lsfr
 
 } {} {}}

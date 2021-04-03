@@ -62,8 +62,8 @@ module lsfr_generic
 	end
 
 	// Handle resets and updating state to next_state
-	always_ff@(posedge clk or posedge reset) begin : internal_reset_handler
-		if(reset)
+	always_ff@(posedge clk or negedge reset) begin : internal_reset_handler
+		if(!reset)
 		begin
 			state <= ENABLE_FF;
 

@@ -349,8 +349,8 @@ clock_divider clk_divide_1MHZ(
 //create a waveform gen
 waveform_gen wavegen (
 	.clk(CLOCK_50),
-	.reset(1'b0),//reset key unknown
-	.en(1'b0),//enable
+	.reset(1'b1),	//reset key unknown
+	.en(1'b1),		//enable
 	.phase_inc(32'd258),
 	.sin_out(sin_wave),
 	.cos_out(cos_wave),
@@ -358,20 +358,45 @@ waveform_gen wavegen (
 	.saw_out(saw_wave)
 );
 
-mux4to1 wave_sel	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(signal_selector[1:0]),	.out(sel_wave));
 
-mux4to1 signal_out	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(signal_selector[1:0]),	.out(actual_selected_signal));
+mux4to1 wave_sel(
+	.a(sin_wave),	
+	.b(cos_wave),	
+	.c(squ_wave),	
+	.d(saw_wave),	
+	.sel(signal_selector[1:0]),
+	
+	.out(sel_wave)
+);
 
-mux4to1	modul_out	(.a(ASK),	.b(BPSK),	.c(LFSR_display	),	.d(),	.sel(modulation_selector[1:0]),	.out(actual_selected_modulation));
+mux4to1 signal_out(
+	.a(sin_wave),	
+	.b(cos_wave),	
+	.c(squ_wave),	
+	.d(saw_wave),	
+	.sel(signal_selector[1:0]),	
+	
+	.out(actual_selected_signal)
+);
 
-assign ASK=LSFR_out[0]?sel_wave:12'b0;
-assign	BPSK=LSFR_out[0]?(~sel_wave+1):sel_wave;
-assign LFSR_display=LSFR_out?12'b1000_0000_0000:12'b0;
+mux4to1	modul_out(
+	.a(ASK),	
+	.b(BPSK),	
+	.c(LFSR_display	),	
+	.d(),	
+	.sel(modulation_selector[1:0]),	
+	
+	.out(actual_selected_modulation)
+);
+
+assign ASK = LSFR_out[0] ? sel_wave : 12'b0;
+assign BPSK = LSFR_out[0] ? (~sel_wave+1) : sel_wave;
+assign LFSR_display = LSFR_out[0] ? 12'b1000_0000_0000 : 12'b0;
 
 //LSFR generator
 lsfr_generic lsfr(
 	.clk(CLOCK_1),
-	.reset(),
+	.reset(1'b1),
 	.q(LSFR_out)
 	
 );
