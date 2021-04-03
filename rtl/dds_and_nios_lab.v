@@ -343,13 +343,13 @@ clock_divider clk_divide_1MHZ(
 	.outclk(CLOCK_1), 		
 	.outclk_Not(), 
 	.div_clk_count (32'h17D7840 >> 1) ,  	// Half-period tick count for frequency
-	.Reset()
+	.Reset(1'b0)
 );
 //create a waveform gen
 waveform_gen wavegen (
 	.clk(CLOCK_50),
-	.reset() ,//reset key unknown
-	.en(1'b1) ,//enable
+	.reset(1'b0 ,//reset key unknown
+	.en(1'b0) ,//enable
 	.phase_inc(32'd258),
 	.sin_out(sin_wave),
 	.cos_out(cos_wave),
