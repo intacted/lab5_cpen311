@@ -1,6 +1,5 @@
-module mux4to1(
-    #parameter  n=12 ;
-)
+module mux4to1
+#(parameter  n=12)
 (
     input   logic  [n-1:0] a,b,c,d;
     input   logic  [1:0]   sel;

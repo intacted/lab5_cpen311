@@ -337,13 +337,11 @@ logic [4:0]LSFR_out;
 logic CLOCK_1;
 logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave;
 
-clock_divider clk_divide_1MHZ(
-	.inclk(CLOCK_50), 			// Put in CLK_50M
 
 clock_divider clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
 	.outclk(CLOCK_1), 		
-	.outclk_Not, 
+	.outclk_Not(), 
 	.div_clk_count (32'h17D7840 >> 1) ,  	// Half-period tick count for frequency
 	.Reset()
 );
@@ -363,9 +361,10 @@ mux4to1 wave_sel	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(s
 
 mux4to1 signal_out	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(signal_selector[1:0]),	.out(actual_selected_signal));
 
-mux4to1	modul_out	(.a(ASK),	.b(BPSK),	.c(LSFR),	.d(),	.sel(modulation_selector[1:0]),	.out(actual_selected_modulation));
-assign ASK=LSFR_out[0]:sel_wave?12'b0;
-assign	BPSK=LSFR_out[0]:(~sel_wave+1)?sel_wave;
+mux4to1	modul_out	(.a(ASK),	.b(BPSK),	.c(LSFR_out),	.d(),	.sel(modulation_selector[1:0]),	.out(actual_selected_modulation));
+
+assign ASK=LSFR_out[0]?sel_wave:12'b0;
+assign	BPSK=LSFR_out[0]?(~sel_wave+1):sel_wave;
 
 //LSFR generator
 lsfr_generic lsfr(
