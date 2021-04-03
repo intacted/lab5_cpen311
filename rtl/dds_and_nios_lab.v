@@ -359,8 +359,12 @@ waveform_gen wavegen (
 	.saw_out(saw_wave)
 );
 
-mux4to1 wave_sel(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave)	.sel(),	.out(sel_wave));
-assign ask=LSFR_out[0]:sel_wave?12'b0;
+mux4to1 wave_sel	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(signal_selector[1:0]),	.out(sel_wave));
+
+mux4to1 signal_out	(.a(sin_wave),	.b(cos_wave),	.c(squ_wave),	.d(saw_wave),	.sel(signal_selector[1:0]),	.out(actual_selected_signal));
+
+mux4to1	modul_out	(.a(ASK),	.b(BPSK),	.c(LSFR),	.d(),	.sel(modulation_selector[1:0]),	.out(actual_selected_modulation));
+assign ASK=LSFR_out[0]:sel_wave?12'b0;
 assign	BPSK=LSFR_out[0]:(~sel_wave+1)?sel_wave;
 
 //LSFR generator
