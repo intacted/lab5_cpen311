@@ -337,6 +337,7 @@ logic [4:0]LSFR_out;
 logic CLOCK_1;
 logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave,LFSR_display;
 
+//32'h17D7840 >> 1
 
 clock_divider clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
@@ -348,8 +349,8 @@ clock_divider clk_divide_1MHZ(
 //create a waveform gen
 waveform_gen wavegen (
 	.clk(CLOCK_50),
-	.reset(1'b0 ,//reset key unknown
-	.en(1'b0) ,//enable
+	.reset(1'b0),//reset key unknown
+	.en(1'b0),//enable
 	.phase_inc(32'd258),
 	.sin_out(sin_wave),
 	.cos_out(cos_wave),
