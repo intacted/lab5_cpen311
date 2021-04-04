@@ -396,7 +396,8 @@ mux4to1 signal_out(
 	.sel(signal_selector[1:0]),	
 	
 	// Output to bottom
-	.out(select_sync)
+	//.out(select_sync)
+	.out(actual_selected_signal)
 );
 
 logic [11:0] select_mod_sync;
@@ -417,7 +418,8 @@ mux4to1	modul_out(
 	.sel(modulation_selector[1:0]),	
 	
 	// Output to top
-	.out(select_mod_sync)	
+	//.out(select_mod_sync)	
+	.out(actual_selected_modulation)	
 );
 
 assign ASK = LFSR_mod ? 32'd258 : 12'b0;
@@ -433,7 +435,7 @@ slow_to_fast #(1) mod1(
     .out(LFSR_mod)
 );
 
-
+/*
 //logic mod2;
 fast_to_slow #(1) mod2(
     .clk1(CLOCK_50), 			//CLOCK_1),
@@ -450,7 +452,7 @@ fast_to_slow #(1) mod3(
 	 
     .out(actual_selected_modulation)
 );
-
+*/
 
 //singal 200hz, dds 50Mhz
 
