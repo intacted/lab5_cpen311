@@ -106,10 +106,11 @@ module lsfr_generic
 	
 endmodule
 
+/*
 module lsfr
 	(
-		input /*logic*/ clk,
-		input /*logic*/ reset,
+		input clk,
+		input reset,
 		output logic [4:0] q
 	 );
 	 
@@ -127,7 +128,7 @@ module lsfr
 	FDC #(5) output_metastability_handler 
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(lsfr_reg0),
 		.q(q)
 	);
@@ -135,7 +136,7 @@ module lsfr
 	FDC #(1) feedback_metastability_handler 
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(feedback),
 		.q(feedback_stable)
 	);
@@ -143,7 +144,7 @@ module lsfr
 	FDC #(1) ff3 
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(lsfr_wire[4]),
 		.q(lsfr_reg0[3])
 	);
@@ -151,7 +152,7 @@ module lsfr
 	FDC #(1) ff2
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(lsfr_wire[3]),
 		.q(lsfr_reg0[2])
 	);
@@ -159,7 +160,7 @@ module lsfr
 	FDC #(1) ff1  
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(lsfr_wire[2]),
 		.q(lsfr_reg0[1])
 	);
@@ -167,7 +168,7 @@ module lsfr
 	FDC #(1) ff0  
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(lsfr_wire[1]),
 		.q(lsfr_reg0[0])
 	);
@@ -175,9 +176,10 @@ module lsfr
 	FDC #(1) ff4 
 	(
 		.clk(clk),
-		.reset(/*EMPTY*/),
+		.reset(),
 		.d(feedback_stable),
 		.q(lsfr_reg0[4])
 	);
 	
 endmodule
+*/

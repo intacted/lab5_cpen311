@@ -1,9 +1,17 @@
-E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv
+E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/slow_to_fast.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/slow_to_fast.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module slow_to_fast_TB
+-- Compiling module slow_to_fast
+-- Compiling module FDC_en
 
 Top level modules:
-	slow_to_fast_TB
+	slow_to_fast
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FDC
+
+Top level modules:
+	FDC
 
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v {0 {vlog -work work -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -13,19 +21,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 ** Error: (vlog-13069) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): near "[": syntax error, unexpected '['.
 ** Error: E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): (vlog-13205) Syntax error found in the scope following 'logic'. Is there a missing '::'?
 
-} {4.0 8.0} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+} {4.0 8.0} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module FDC
+-- Compiling module slow_to_fast_TB
 
 Top level modules:
-	FDC
-
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux4to1
-
-Top level modules:
-	mux4to1
+	slow_to_fast_TB
 
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -34,20 +35,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	clock_divider_TB
 
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux4to1
+
+Top level modules:
+	mux4to1
+
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module lsfr_TB
 
 Top level modules:
 	lsfr_TB
-
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lsfr_generic
--- Compiling module lsfr
-
-Top level modules:
-	lsfr_generic
-	lsfr
 
 } {} {}}

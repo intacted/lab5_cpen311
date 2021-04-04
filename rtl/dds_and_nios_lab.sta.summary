@@ -3,99 +3,99 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : -7.602
-TNS   : -251.490
+Slack : -7.283
+TNS   : -299.600
 
 Type  : Slow 1100mV 85C Model Setup 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -6.811
-TNS   : -296.640
+Slack : -7.180
+TNS   : -312.546
 
 Type  : Slow 1100mV 85C Model Setup 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.170
+Slack : 0.515
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 4.498
+Slack : 4.530
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 9.350
+Slack : 9.091
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.359
+Slack : 18.698
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 32.500
+Slack : 30.799
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.850
-TNS   : -42.128
-
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.214
-TNS   : 0.000
+Slack : -2.036
+TNS   : -40.848
 
 Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.228
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.257
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.245
+Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : 0.373
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 0.537
+Type  : Slow 1100mV 85C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
+Slack : 0.548
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 1.441
+Type  : Slow 1100mV 85C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
+Slack : 0.822
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -5.295
-TNS   : -15.367
+Slack : -5.172
+TNS   : -15.012
 
 Type  : Slow 1100mV 85C Model Recovery 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.919
-TNS   : -21.082
+Slack : -1.845
+TNS   : -27.638
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 15.268
+Slack : 13.631
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 16.554
+Slack : 17.337
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 17.726
+Slack : 17.412
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.346
-TNS   : -0.822
+Slack : -0.586
+TNS   : -1.615
 
 Type  : Slow 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.556
+Slack : 0.344
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.636
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.530
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.691
+Slack : 0.790
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -111,123 +111,123 @@ Slack : 2.277
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.880
+Slack : 8.879
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 11.280
+Slack : 11.274
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 18.384
+Slack : 18.385
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 18.663
+Slack : 18.661
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 18.843
+Slack : 18.735
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.146
+Slack : 19.163
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : -7.541
-TNS   : -252.002
+Slack : -7.302
+TNS   : -303.776
 
 Type  : Slow 1100mV 0C Model Setup 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -6.534
-TNS   : -273.758
+Slack : -6.553
+TNS   : -282.208
 
 Type  : Slow 1100mV 0C Model Setup 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.395
+Slack : 0.733
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 4.987
+Slack : 5.018
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 9.655
+Slack : 9.154
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.383
+Slack : 18.705
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 32.625
+Slack : 30.986
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.891
-TNS   : -56.562
+Slack : -2.168
+TNS   : -55.161
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.200
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.203
+Slack : 0.206
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.295
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.247
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.386
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 0.509
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 1.403
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
+Slack : 0.826
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -4.790
-TNS   : -13.873
+Slack : -4.692
+TNS   : -13.539
 
 Type  : Slow 1100mV 0C Model Recovery 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.522
-TNS   : -16.711
+Slack : -1.447
+TNS   : -21.667
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 15.475
+Slack : 13.905
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 16.726
+Slack : 17.480
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 17.863
+Slack : 17.506
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.639
-TNS   : -1.715
+Slack : -0.838
+TNS   : -2.363
 
 Type  : Slow 1100mV 0C Model Removal 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.366
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.514
+Slack : 0.272
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.600
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.500
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.651
+Slack : 0.737
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -239,127 +239,127 @@ Slack : 1.562
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 2.264
+Slack : 2.254
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.913
+Slack : 8.910
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 11.260
+Slack : 11.258
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 18.417
+Slack : 18.394
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 18.625
+Slack : 18.618
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 18.836
+Slack : 18.781
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.152
+Slack : 19.162
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -4.677
-TNS   : -220.340
+Slack : -4.760
+TNS   : -226.309
 
 Type  : Fast 1100mV 85C Model Setup 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : -3.811
-TNS   : -117.225
+Slack : -3.652
+TNS   : -147.795
 
 Type  : Fast 1100mV 85C Model Setup 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.018
+Slack : 3.182
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 7.802
+Slack : 7.700
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 13.499
+Slack : 13.324
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.046
+Slack : 19.275
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 34.735
+Slack : 33.626
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.801
-TNS   : -11.264
-
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.128
-TNS   : 0.000
+Slack : -0.824
+TNS   : -13.932
 
 Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
 Slack : 0.143
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.149
+TNS   : 0.000
+
 Type  : Fast 1100mV 85C Model Hold 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.155
+Slack : 0.176
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : 0.181
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 0.281
+Type  : Fast 1100mV 85C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
+Slack : 0.315
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 0.785
+Type  : Fast 1100mV 85C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
+Slack : 0.417
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.683
-TNS   : -10.656
+Slack : -3.636
+TNS   : -10.511
 
 Type  : Fast 1100mV 85C Model Recovery 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.726
+Slack : 0.753
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 16.789
+Slack : 15.595
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 17.692
+Slack : 18.310
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 19.010
+Slack : 18.788
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.193
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.288
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.292
+Slack : 0.085
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.345
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.289
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.384
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -371,11 +371,11 @@ Slack : 1.562
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 2.392
+Slack : 2.387
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.481
+Slack : 8.480
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
@@ -383,115 +383,115 @@ Slack : 11.390
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 18.220
+Slack : 18.226
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 18.378
+Slack : 18.384
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 19.084
+Slack : 19.091
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.521
+Slack : 19.529
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.893
-TNS   : -175.087
+Slack : -3.817
+TNS   : -178.030
 
 Type  : Fast 1100mV 0C Model Setup 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : -3.648
-TNS   : -111.719
+Slack : -3.516
+TNS   : -143.026
 
 Type  : Fast 1100mV 0C Model Setup 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 3.355
+Slack : 3.507
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 8.940
+Slack : 8.880
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 14.200
+Slack : 14.014
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.110
+Slack : 19.311
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 35.164
+Slack : 34.165
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.932
-TNS   : -17.283
+Slack : -0.981
+TNS   : -18.974
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.117
+Slack : 0.118
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.117
+Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.149
+Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.171
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 0.249
+Slack : 0.172
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 0.762
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -2.878
-TNS   : -8.289
+Slack : -2.824
+TNS   : -8.089
 
 Type  : Fast 1100mV 0C Model Recovery 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 1.527
+Slack : 1.580
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 17.176
+Slack : 16.134
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 17.977
+Slack : 18.489
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 19.252
+Slack : 19.065
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'U0|vga|vga_clk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.195
-TNS   : -0.467
+Slack : -0.286
+TNS   : -0.768
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.142
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.207
+Slack : 0.193
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.263
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.315
+Slack : 0.264
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.351
+Slack : 0.394
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -503,7 +503,7 @@ Slack : 1.562
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 2.390
+Slack : 2.388
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -515,19 +515,19 @@ Slack : 11.387
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 18.175
+Slack : 18.179
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Generate_Arbitrary_Divided_Clk32:Generate_LCD_scope_Clk|var_clk_div32:Div_Clk|tc_reg'
-Slack : 18.412
+Slack : 18.408
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'hack_ltm_sincronization:hack_ltm_sincronization_inst|line_rdy'
-Slack : 19.080
+Slack : 19.092
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'U0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.525
+Slack : 19.532
 TNS   : 0.000
 
 ------------------------------------------------------------
