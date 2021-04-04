@@ -33,11 +33,8 @@ module lsfr_TB;
 		begin
 			//reset <= 1'b1;
 
-			reset <= 1'b1;
-			//reset_ff <= 1'b1;
-			#5;
-
 			reset <= 1'b0;
+			//reset_ff <= 1'b1;
 			#10000;
 
 

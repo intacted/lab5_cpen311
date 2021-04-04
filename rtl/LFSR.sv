@@ -17,7 +17,7 @@ logic q4;
 logic [2:0] state;
 
 
-assign {q4_next,q3_next,q2_next,q1_next,q0_next}=reset?5'b000_10:{q3,q2,q1,q0,q2^q0};
+assign {q4_next,q3_next,q2_next,q1_next,q0_next}=state[2]?5'b000_10:{q3,q2,q1,q0,q2^q0};
 
 parameter [2:0]	start 	=3'b1_00;
 parameter [2:0] run		=3'b0_01;
