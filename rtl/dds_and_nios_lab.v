@@ -338,7 +338,7 @@ logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave,LFSR_display;
 
 logic CLOCK_200Hz;
 
-clock_divider clk_divide_1MHZ(
+generate_clk32 clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
 	.outclk(lfsr_clk), 			// 1Hz clock		
 	.outclk_Not(), 
@@ -346,7 +346,7 @@ clock_divider clk_divide_1MHZ(
 	.Reset(1'b1)
 );
 
-clock_divider clk_divide_200Hz(
+generate_clk32 clk_divide_200Hz(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
 	.outclk(CLOCK_200Hz), 					
 	.outclk_Not(), 
@@ -440,7 +440,7 @@ fast_to_slow #(12) mod3(
 
 //LSFR generator
 LFSR_block LSFR_module(
-	.clk(CLOCK_50/*lfsr_clk*/), 		//CLOCK_1),
+	.clk(lfsr_clk/*lfsr_clk*/), 		//CLOCK_1),
 	.reset(1'b0),
 	.q(LFSR) 				//LSFR_out)
 	
