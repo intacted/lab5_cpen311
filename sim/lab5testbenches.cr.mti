@@ -1,31 +1,46 @@
-E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v {0 {vlog -work work -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dds_and_nios_lab
+** Error: (vlog-13032) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(203): near ";": Syntax error.
+** Error: (vlog-13032) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(204): near ";": Syntax error.
+** Error: (vlog-13069) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): near "[": syntax error, unexpected '['.
+** Error: E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): (vlog-13205) Syntax error found in the scope following 'logic'. Is there a missing '::'?
+
+} {4.0 8.0} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module FDC
 
 Top level modules:
 	FDC
 
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux4to1
+
+Top level modules:
+	mux4to1
+
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module clock_divider_TB
 
 Top level modules:
 	clock_divider_TB
 
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv {1 {vlog -work work -sv -stats=none {E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\rtl\lsfr.sv}
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lsfr_TB
+
+Top level modules:
+	lsfr_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lsfr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module lsfr_generic
 -- Compiling module lsfr
 
 Top level modules:
 	lsfr_generic
 	lsfr
-
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none {E:\Courses\CPEN311\Ebi\Labs\lab5_cpen311\sim\lsfr_TB.sv}
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
--- Compiling module lsfr_TB
-
-Top level modules:
-	lsfr_TB
 
 } {} {}}

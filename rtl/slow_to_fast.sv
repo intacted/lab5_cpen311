@@ -15,19 +15,20 @@ logic [N-1:0] w_reg2, w_reg3, ff1_ff2, ff2_reg3;
 		.reset(),
 		.d(in),
 
-		.q(w_reg3)
+		.q(w_reg3) // into reg3
 	);
 
-   FDC #(N) reg2 
+	FDC_en #(N) reg3 
 	(
 		.clk(clk2),
+        .en(ff2_reg3),
 		.reset(),
-		.d(w_reg2),
+		.d(w_reg3), // from reg3
 
-		.q(out)
+		.q(w_reg2)  // into reg2
 	);
 
-   FDC #(N) first 
+   FDC #(1) first 
 	(
 		.clk(~clk2),
 		.reset(),
@@ -36,25 +37,23 @@ logic [N-1:0] w_reg2, w_reg3, ff1_ff2, ff2_reg3;
 		.q(ff1_ff2)
 	);
 
-   FDC #(N) second 
+   FDC #(1) second 
 	(
-		.clk(clk2),
+		.clk(~clk2),
 		.reset(),
-		.d(feedback),
+		.d(ff1_ff2),
 
 		.q(ff2_reg3)
 	);
 
-   FDC_en #(N) reg3 
+	FDC #(N) reg2 
 	(
 		.clk(clk2),
-        .en(ff2_reg3),
 		.reset(),
-		.d(w_reg3),
+		.d(w_reg2),
 
-		.q(w_reg2)
+		.q(out) 	// out
 	);
-
 endmodule
 
 module FDC_en
@@ -70,7 +69,7 @@ module FDC_en
 	begin
 		if (reset) 
 			q <= 0;
-      else if (en)
-		   q <= d;
+     	else if (en)
+			q <= d;
 	end
 endmodule
