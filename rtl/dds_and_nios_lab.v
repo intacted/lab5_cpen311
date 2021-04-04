@@ -364,7 +364,7 @@ waveform_gen wavegen (
 	.clk(CLOCK_50),
 	.reset(1'b1),	//reset key unknown
 	.en(1'b1),		//enable
-	.phase_inc(select_mod_sync),
+	.phase_inc(32'd258),
 
 	// Outputs 
 	.sin_out(sin_wave),
@@ -386,19 +386,7 @@ mux4to1 wave_sel(
 	.out(sel_wave)
 );
 
-mux4to1 signal_out(
-	.a(sin_wave),	
-	.b(cos_wave),	
-	.c(saw_wave),	
-	.d(squ_wave),	
-
-	// Select for bottom
-	.sel(signal_selector[1:0]),	
-	
-	// Output to bottom
-	//.out(select_sync)
-	.out(actual_selected_signal)
-);
+assign actual_selected_signal= sel_wave;
 
 logic [11:0] select_mod_sync;
 
@@ -422,9 +410,9 @@ mux4to1	modul_out(
 	.out(actual_selected_modulation)	
 );
 
-assign ASK = LFSR_mod ? 32'd258 : 12'b0;
-assign BPSK = LFSR_mod ? (~sel_wave + 1) : sel_wave;  			
-assign LFSR_display = LFSR_mod ? 12'b1000_0000_0000 : 12'b0;
+assign ASK = LFSR[0] ? sel_wave: 12'b0;
+assign BPSK = LFSR[0] ? (~sel_wave + 1) : sel_wave;  			
+assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
 
 logic LFSR_mod;
 slow_to_fast #(1) mod1(
@@ -457,7 +445,7 @@ fast_to_slow #(1) mod3(
 //singal 200hz, dds 50Mhz
 
 //LSFR generator
-LFSR_block LFSR(
+LFSR_block LSFR_module(
 	.clk(lfsr_clk), 		//CLOCK_1),
 	.reset(1'b0),
 	.q(LFSR) 				//LSFR_out)
