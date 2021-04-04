@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module lsfr_TB;
+module lfsr_TB;
     parameter clock_scale = 5'd20;		// for clk
 
 	// Output
@@ -9,7 +9,7 @@ module lsfr_TB;
 	// -- clock and reset signals  
 	logic clk, reset, reset_ff;										
 	 
-	lsfr_generic dut(
+	lfsr_generic dut(
 		// Inputs
 		.clk(clk),
 		.reset(reset),

@@ -343,7 +343,7 @@ generate_clk32 clk_divide_1MHZ(
 	.outclk(lfsr_clk), 			// 1Hz clock		
 	.outclk_Not(), 
 	.div_clk_count (32'h17D7840 /*>> 1*/) ,  	// Half-period tick count for frequency
-	.Reset(1'b1)
+	.reset(1'b1)
 );
 
 generate_clk32 clk_divide_200Hz(
@@ -351,7 +351,7 @@ generate_clk32 clk_divide_200Hz(
 	.outclk(CLOCK_200Hz), 					
 	.outclk_Not(), 
 	.div_clk_count (32'h1E848) ,  	// Half-period tick count for frequency
-	.Reset(1'b1)
+	.reset(1'b1)
 );
 
 //create a waveform gen
@@ -382,7 +382,7 @@ mux4to1 wave_sel(
 	.out(sel_wave)
 );
 
-assign actual_selected_signal = sel_wave;
+//assign actual_selected_signal = sel_wave;
 
 logic [11:0] select_mod_sync;
 
@@ -392,18 +392,18 @@ logic LSFR_mod;
 
 
 
-mux4to1	modul_out(
-	.a(ASK),	
-	.b(BPSK),	
-	.c(LFSR_display	),	
-	.d(),	
+mux4to1 modul_out(
+    .a(ASK),
+    .b(LFSR_display),
+    .c(BPSK    ),
+    .d(),
 
-	// Select for top
-	.sel(modulation_selector[1:0]),	
-	
-	// Output to top
-	//.out(select_mod_sync)	
-	.out(actual_selected_modulation)	
+    // Select for top
+    .sel(modulation_selector[1:0]),
+
+    // Output to top
+    .out(select_mod_sync)
+    //.out(actual_selected_modulation)
 );
 
 assign ASK = LFSR[0] ? sin_wave : 12'b0;						// should always be sin according to solution
@@ -419,7 +419,7 @@ slow_to_fast #(1) mod1(
     .out(LFSR_mod)
 );
 
-/*
+
 //singal 200hz, dds 50Mhz
 fast_to_slow #(12) mod2(
     .clk1(CLOCK_50), 			
@@ -436,7 +436,7 @@ fast_to_slow #(12) mod3(
 	 
     .out(actual_selected_modulation)
 );
-*/
+
 
 //LSFR generator
 LFSR_block LSFR_module(
