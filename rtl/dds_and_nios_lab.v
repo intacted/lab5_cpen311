@@ -430,7 +430,7 @@ slow_to_fast #(1) mod1(
     .clk2(CLOCK_50),                //CLOCK_50),
     .in(LFSR[0]),					//LSFR_out[0]),
 	 
-    .out(LSFR_mod)
+    .out(LFSR_mod)
 );
 
 
