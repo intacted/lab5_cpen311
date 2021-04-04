@@ -1,4 +1,11 @@
-E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v {0 {vlog -work work -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v
+E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/slow_to_fast_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module slow_to_fast_TB
+
+Top level modules:
+	slow_to_fast_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v {0 {vlog -work work -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module dds_and_nios_lab
 ** Error: (vlog-13032) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(203): near ";": Syntax error.
