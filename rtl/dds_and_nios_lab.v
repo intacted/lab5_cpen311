@@ -364,7 +364,7 @@ waveform_gen wavegen (
 	.clk(CLOCK_50),
 	.reset(1'b1),	//reset key unknown
 	.en(1'b1),		//enable
-	.phase_inc(32'd258),
+	.phase_inc(select_mod_sync),
 
 	// Outputs 
 	.sin_out(sin_wave),
@@ -403,6 +403,8 @@ logic [11:0] select_mod_sync;
 
 logic [11:0] select_sync;
 
+logic LSFR_mod;
+
 
 
 mux4to1	modul_out(
@@ -418,7 +420,7 @@ mux4to1	modul_out(
 	.out(select_mod_sync)	
 );
 
-assign ASK = LFSR_mod ? sel_wave : 12'b0;
+assign ASK = LFSR_mod ? 32'd258 : 12'b0;
 assign BPSK = LFSR_mod ? (~sel_wave + 1) : sel_wave;  			
 assign LFSR_display = LFSR_mod ? 12'b1000_0000_0000 : 12'b0;
 

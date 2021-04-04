@@ -1,1 +1,30 @@
+{C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/fast_slow_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/fast_slow_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module TB_fast
 
+Top level modules:
+	TB_fast
+
+} {} {}} {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module FDC
+
+Top level modules:
+	FDC
+
+} {} {}} {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module slow_to_fast
+-- Compiling module FDC_en
+
+Top level modules:
+	slow_to_fast
+
+} {} {}} {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/fast_to_slow.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/fast_to_slow.sv}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module fast_to_slow
+
+Top level modules:
+	fast_to_slow
+
+} {} {}}
