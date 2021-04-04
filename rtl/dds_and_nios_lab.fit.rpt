@@ -1,5 +1,5 @@
 Fitter report for dds_and_nios_lab
-Sun Apr 04 13:44:50 2021
+Sun Apr 04 14:11:11 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -70,7 +70,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Sun Apr 04 13:44:50 2021      ;
+; Fitter Status                   ; Successful - Sun Apr 04 14:11:11 2021      ;
 ; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                   ; dds_and_nios_lab                           ;
 ; Top-level Entity Name           ; dds_and_nios_lab                           ;
@@ -159,15 +159,17 @@ agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 4.01        ;
+; Average used               ; 4.11        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  37.5%      ;
-;     Processor 3            ;  35.5%      ;
-;     Processors 4-8         ;  35.1%      ;
-;     Processors 9-16        ;   6.6%      ;
+;     Processor 2            ;  38.4%      ;
+;     Processor 3            ;  37.6%      ;
+;     Processors 4-6         ;  37.3%      ;
+;     Processor 7            ;  36.1%      ;
+;     Processor 8            ;  35.4%      ;
+;     Processors 9-16        ;   6.5%      ;
 +----------------------------+-------------+
 
 
@@ -7272,7 +7274,7 @@ Info (170056): Fitter has implemented the following 4 RAMs using MLAB locations,
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:34
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:51
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:47
 Info: Adding SDC requirements for alt_vipitc131_IS2Vid instance U0|vga|alt_vip_itc_0
 Info: ==========================================================================
 Info: timid_ignore of freqgen_audio_dac  max_delay = 50 min_delay = -50 : Arranged 5 clocks
@@ -7287,8 +7289,8 @@ Info (170193): Fitter routing operations beginning
 Info (170089): 2e+03 ns of routing delay (approximately 1.2% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 4% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
-Info (170194): Fitter routing operations ending: elapsed time is 00:01:25
-Info (11888): Total time spent on timing analysis during the Fitter is 26.04 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:01:32
+Info (11888): Total time spent on timing analysis during the Fitter is 25.53 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -7388,10 +7390,10 @@ Warning (169064): Following 80 pins have no output enable or a GND or VCC output
     Info (169065): Pin PS2_DAT2 has a permanently disabled output enable
 Info (144001): Generated suppressed messages file E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 120 warnings
-    Info: Peak virtual memory: 8633 megabytes
-    Info: Processing ended: Sun Apr 04 13:44:54 2021
-    Info: Elapsed time: 00:04:24
-    Info: Total CPU time (on all processors): 00:14:22
+    Info: Peak virtual memory: 8630 megabytes
+    Info: Processing ended: Sun Apr 04 14:11:16 2021
+    Info: Elapsed time: 00:04:29
+    Info: Total CPU time (on all processors): 00:14:27
 
 
 +----------------------------+

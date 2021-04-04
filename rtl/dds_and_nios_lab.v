@@ -343,7 +343,7 @@ clock_divider clk_divide_1MHZ(
 	.outclk(lfsr_clk), 			// 1Hz clock		
 	.outclk_Not(), 
 	.div_clk_count (32'h17D7840 /*>> 1*/) ,  	// Half-period tick count for frequency
-	.Reset(1'b0)
+	.Reset(1'b1)
 );
 
 clock_divider clk_divide_200Hz(
@@ -351,7 +351,7 @@ clock_divider clk_divide_200Hz(
 	.outclk(CLOCK_200Hz), 					
 	.outclk_Not(), 
 	.div_clk_count (32'h1E848) ,  	// Half-period tick count for frequency
-	.Reset(1'b0)
+	.Reset(1'b1)
 );
 
 //create a waveform gen

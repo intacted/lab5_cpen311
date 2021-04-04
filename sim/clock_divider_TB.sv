@@ -20,7 +20,7 @@ module clock_divider_TB;
 	initial
 		begin
 			
-			div_clk_count <= 32'h5D5C; //32'h3331;
+			div_clk_count <= 32'h5D5C; //32'h3331;o
 			Reset <= 0; #1;
 
 			assert(outclk === 0) else $error("Big Problem at 1.1");
