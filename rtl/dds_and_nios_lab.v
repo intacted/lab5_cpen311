@@ -364,7 +364,7 @@ waveform_gen wavegen (
 	.clk(CLOCK_50),
 	.reset(1'b1),	//reset key unknown
 	.en(1'b1),		//enable
-	.phase_inc(actual_selected_modulation),
+	.phase_inc(select_mod_sync),
 
 	// Outputs 
 	.sin_out(sin_wave),
@@ -396,6 +396,7 @@ mux4to1 signal_out(
 	.sel(signal_selector[1:0]),	
 	
 	// Output to bottom
+	//.out(select_sync)
 	.out(actual_selected_signal)
 );
 
@@ -403,7 +404,7 @@ logic [11:0] select_mod_sync;
 
 logic [11:0] select_sync;
 
-
+logic LSFR_mod;
 
 
 
@@ -417,6 +418,7 @@ mux4to1	modul_out(
 	.sel(modulation_selector[1:0]),	
 	
 	// Output to top
+	//.out(select_mod_sync)	
 	.out(actual_selected_modulation)	
 );
 
@@ -433,7 +435,7 @@ slow_to_fast #(1) mod1(
     .out(LFSR_mod)
 );
 
-
+/*
 //logic mod2;
 fast_to_slow #(1) mod2(
     .clk1(CLOCK_50), 			//CLOCK_1),
@@ -450,7 +452,7 @@ fast_to_slow #(1) mod3(
 	 
     .out(actual_selected_modulation)
 );
-
+*/
 
 //singal 200hz, dds 50Mhz
 
