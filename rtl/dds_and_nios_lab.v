@@ -334,19 +334,15 @@ DE1_SoC_QSYS U0(
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_modulation;
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
 
-//logic [4:0]LSFR_out;
-//logic CLOCK_1;
 logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave,LFSR_display;
-
-//32'h17D7840 >> 1
 
 logic CLOCK_200Hz;
 
 clock_divider clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
-	.outclk(lfsr_clk), 			//CLOCK_1), 		
+	.outclk(lfsr_clk), 			// 1Hz clock		
 	.outclk_Not(), 
-	.div_clk_count (32'h17D7840 >> 1) ,  	// Half-period tick count for frequency
+	.div_clk_count (32'h17D7840 /*>> 1*/) ,  	// Half-period tick count for frequency
 	.Reset(1'b0)
 );
 
@@ -386,7 +382,7 @@ mux4to1 wave_sel(
 	.out(sel_wave)
 );
 
-assign actual_selected_signal= sel_wave;
+assign actual_selected_signal = sel_wave;
 
 logic [11:0] select_mod_sync;
 
@@ -410,7 +406,7 @@ mux4to1	modul_out(
 	.out(actual_selected_modulation)	
 );
 
-assign ASK = LFSR[0] ? sel_wave: 12'b0;
+assign ASK = LFSR[0] ? sin_wave : 12'b0;						// should always be sin according to solution
 assign BPSK = LFSR[0] ? (~sel_wave + 1) : sel_wave;  			
 assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
 
@@ -424,29 +420,27 @@ slow_to_fast #(1) mod1(
 );
 
 /*
-//logic mod2;
-fast_to_slow #(1) mod2(
-    .clk1(CLOCK_50), 			//CLOCK_1),
-    .clk2(CLOCK_200Hz),                //CLOCK_50),
-    .in(select_sync),						//LSFR_out[0]),
+//singal 200hz, dds 50Mhz
+fast_to_slow #(12) mod2(
+    .clk1(CLOCK_50), 			
+    .clk2(CLOCK_200Hz),                
+    .in(sel_wave), //select_sync),						
 	 
     .out(actual_selected_signal)
 );
 
-fast_to_slow #(1) mod3(
-    .clk1(CLOCK_50), 			//CLOCK_1),
-    .clk2(CLOCK_200Hz),                //CLOCK_50),
-    .in(select_mod_sync),						//LSFR_out[0]),
+fast_to_slow #(12) mod3(
+    .clk1(CLOCK_50), 			
+    .clk2(CLOCK_200Hz),                
+    .in(select_mod_sync),					
 	 
     .out(actual_selected_modulation)
 );
 */
 
-//singal 200hz, dds 50Mhz
-
 //LSFR generator
 LFSR_block LSFR_module(
-	.clk(lfsr_clk), 		//CLOCK_1),
+	.clk(CLOCK_50/*lfsr_clk*/), 		//CLOCK_1),
 	.reset(1'b0),
 	.q(LFSR) 				//LSFR_out)
 	

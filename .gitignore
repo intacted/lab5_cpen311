@@ -1,5 +1,4 @@
-
-
-rtl/.metadata/
 rtl/db/
 rtl/incremental_db
+rtl/software/.metadata
+rtl/.metadata/
