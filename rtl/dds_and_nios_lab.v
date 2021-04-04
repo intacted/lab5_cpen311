@@ -412,11 +412,11 @@ mux4to1	modul_out(
 	.out(actual_selected_modulation)	
 );
 
-assign ASK = LSFR_mod ? sel_wave : 12'b0;
-assign BPSK = LSFR_mod ? (~sel_wave + 1) : sel_wave;  			
-assign LFSR_display = LSFR_mod ? 12'b1000_0000_0000 : 12'b0;
+assign ASK = LFSR_mod ? sel_wave : 12'b0;
+assign BPSK = LFSR_mod ? (~sel_wave + 1) : sel_wave;  			
+assign LFSR_display = LFSR_mod ? 12'b1000_0000_0000 : 12'b0;
 
-logic LSFR_mod;
+logic LFSR_mod;
 slow_to_fast #(1) mod1(
     .clk1(lfsr_clk), 				//CLOCK_1),
     .clk2(CLOCK_50),                //CLOCK_50),

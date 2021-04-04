@@ -37,3 +37,15 @@ Info: Building ../lab5_bsp/
 C:/altera/14.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
 [BSP build complete]
 [lab5 build complete]
+20:08:58 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/altera/14.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+20:09:24 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/altera/14.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]

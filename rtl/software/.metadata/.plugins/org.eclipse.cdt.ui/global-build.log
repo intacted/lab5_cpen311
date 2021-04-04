@@ -206,3 +206,15 @@ Info:                               46 KBytes free for stack + heap.
 Info: Creating DE1_SoC_SDRAM_Nios_Test.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source DE1_SoC_SDRAM_Nios_Test.elf >DE1_SoC_SDRAM_Nios_Test.objdump
 [DE1_SoC_SDRAM_Nios_Test build complete]
+20:15:43 **** Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/altera/14.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
+20:15:45 **** Incremental Build of configuration Nios II for project lab5 ****
+make all 
+Info: Building ../lab5_bsp/
+C:/altera/14.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab5_bsp/
+[BSP build complete]
+[lab5 build complete]
