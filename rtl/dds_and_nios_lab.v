@@ -433,7 +433,7 @@ slow_to_fast #(1) mod1(
 
 
 //logic mod2;
-fast_to_slow mod2(
+fast_to_slow #(1) mod2(
     .clk1(CLOCK_50), 			//CLOCK_1),
     .clk2(CLOCK_200Hz),                //CLOCK_50),
     .in(select_sync),						//LSFR_out[0]),
@@ -441,7 +441,7 @@ fast_to_slow mod2(
     .out(actual_selected_signal)
 );
 
-fast_to_slow mod3(
+fast_to_slow #(1) mod3(
     .clk1(CLOCK_50), 			//CLOCK_1),
     .clk2(CLOCK_200Hz),                //CLOCK_50),
     .in(select_mod_sync),						//LSFR_out[0]),
