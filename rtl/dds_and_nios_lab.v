@@ -457,7 +457,7 @@ fast_to_slow #(1) mod3(
 //singal 200hz, dds 50Mhz
 
 //LSFR generator
-lsfr_generic lsfr(
+LFSR_block LFSR(
 	.clk(lfsr_clk), 		//CLOCK_1),
 	.reset(1'b1),
 	.q(LFSR) 				//LSFR_out)

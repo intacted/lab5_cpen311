@@ -33,7 +33,7 @@ r1
 Z5 o-work work -sv
 vFDC
 R0
-R1
+Z6 !s110 1617560045
 !i10b 1
 !s100 4afNE`dWof<^j2GE>7T]31
 IOKSAY5j]BREhKi>aV<WWb0
@@ -41,7 +41,7 @@ R2
 !s105 Nbit_register_async_reset_sv_unit
 S1
 R3
-w1617315874
+w1617558540
 8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv
 FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv
 L0 2
@@ -49,7 +49,7 @@ R4
 r1
 !s85 0
 31
-!s108 1617511842.795000
+!s108 1617560045.346000
 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
 !i113 1
@@ -62,66 +62,138 @@ R1
 !s100 ZjKT=2WjK[EnahPj=07Hz0
 IB=L<Nl7RYXIzlWKGmE6ia3
 R2
-Z6 !s105 slow_to_fast_sv_unit
+Z7 !s105 slow_to_fast_sv_unit
 S1
 R3
-Z7 w1617510276
-Z8 8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv
-Z9 FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv
+Z8 w1617510276
+Z9 8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv
+Z10 FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv
 L0 60
 R4
 r1
 !s85 0
 31
-Z10 !s108 1617511842.691000
-Z11 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv|
-Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv|
+Z11 !s108 1617511842.691000
+Z12 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv|
+Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/slow_to_fast.sv|
 !i113 1
 R5
 n@f@d@c_en
-Esincos_lut
-Z13 w1617315875
-Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z17 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+vFDC_in
+R0
+R6
+!i10b 1
+!s100 C5dN2G6X1^51d7::JgPJ>1
+I6^L4Im^IeCe?P]G<Bo_kl0
+R2
+!s105 Nbit_register_async_reset_in_sv_unit
+S1
 R3
-Z18 8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd
-Z19 FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd
+w1617558775
+8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv
+FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1617560045.522000
+!s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv|
+!i113 1
+R5
+n@f@d@c_in
+vLFSR_block
+R0
+R6
+!i10b 1
+!s100 DShf[E0M9Tk4SbA;4OHl?1
+IELz[e<^idUl`F4`T^Ej9@3
+R2
+!s105 LFSR_sv_unit
+S1
+R3
+w1617559838
+8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv
+FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1617560045.431000
+!s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv|
+!i113 1
+R5
+n@l@f@s@r_block
+vlsfr_TB
+R0
+R6
+!i10b 1
+!s100 >?<b;1OZf`P^W_:3g`=^;0
+In7zmPQST2eN@]KXEXiMz73
+R2
+!s105 lsfr_TB_sv_unit
+S1
+R3
+w1617559880
+8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv
+FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1617560045.261000
+!s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv|
+!i113 1
+R5
+nlsfr_@t@b
+Esincos_lut
+Z14 w1617315875
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R3
+Z19 8C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd
+Z20 FC:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd
 l0
 L25
 VX15J`P?Qb`4ma^1hIn]=`0
 !s100 7iWn1leeEa[=VGaM;5>8;2
-Z20 OV;C;10.3c;59
+Z21 OV;C;10.3c;59
 32
-Z21 !s110 1617423543
+Z22 !s110 1617423543
 !i10b 1
-Z22 !s108 1617423543.167000
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd|
-Z24 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd|
+Z23 !s108 1617423543.167000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd|
+Z25 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/sincos_lut.vhd|
 !i113 1
-Z25 o-work work -2002 -explicit
-Z26 tExplicit 1
+Z26 o-work work -2002 -explicit
+Z27 tExplicit 1
 Artl
-R14
 R15
 R16
 R17
+R18
 DEx4 work 10 sincos_lut 0 22 X15J`P?Qb`4ma^1hIn]=`0
 l1080
 L40
 VQdPPaZeRm;V@o[3URiPdP2
 !s100 5PS@B:PNXg`9HEY7Mn21@2
-R20
-32
 R21
-!i10b 1
+32
 R22
+!i10b 1
 R23
 R24
-!i113 1
 R25
+!i113 1
 R26
+R27
 vslow_to_fast
 R0
 R1
@@ -129,20 +201,20 @@ R1
 !s100 S^7z5cnZW6f`mD@^=z;Wi0
 IN4oHd66SWgFhQeYU[TTf90
 R2
-R6
+R7
 S1
 R3
-R7
 R8
 R9
+R10
 L0 1
 R4
 r1
 !s85 0
 31
-R10
 R11
 R12
+R13
 !i113 1
 R5
 vTB_fast
@@ -170,43 +242,43 @@ r1
 R5
 n@t@b_fast
 Ewaveform_gen
-Z27 w1617318453
-R14
-R16
+Z28 w1617318453
+R15
 R17
+R18
 R3
-Z28 8C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd
-Z29 FC:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd
+Z29 8C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd
+Z30 FC:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd
 l0
 L25
 V6g>7_nmdaCXm[:b[:hUcd1
 !s100 O9<>HBaTeeZdZYXNFZ;ln1
-R20
+R21
 32
-Z30 !s110 1617423542
+Z31 !s110 1617423542
 !i10b 1
-Z31 !s108 1617423542.371000
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd|
-Z33 !s107 C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd|
+Z32 !s108 1617423542.371000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd|
+Z34 !s107 C:\Users\Mark Lee-PC\Documents\GitHub\lab5_cpen311\rtl\waveform_gen.vhd|
 !i113 1
-R25
 R26
+R27
 Artl
-R14
-R16
+R15
 R17
+R18
 DEx4 work 12 waveform_gen 0 22 6g>7_nmdaCXm[:b[:hUcd1
 l69
 L48
 Vch@:4=b<h08g;GYaj8HNf2
 !s100 QQRge_zN=GUAdEVj][PIb3
-R20
+R21
 32
-R30
-!i10b 1
 R31
+!i10b 1
 R32
 R33
+R34
 !i113 1
-R25
 R26
+R27
