@@ -33,7 +33,7 @@ r1
 Z5 o-work work -sv
 vFDC
 R0
-Z6 !s110 1617560045
+Z6 !s110 1617561111
 !i10b 1
 !s100 4afNE`dWof<^j2GE>7T]31
 IOKSAY5j]BREhKi>aV<WWb0
@@ -49,7 +49,7 @@ R4
 r1
 !s85 0
 31
-!s108 1617560045.346000
+!s108 1617561111.743000
 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv|
 !i113 1
@@ -97,7 +97,7 @@ R4
 r1
 !s85 0
 31
-!s108 1617560045.522000
+!s108 1617561111.932000
 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset_in.sv|
 !i113 1
@@ -105,7 +105,7 @@ R5
 n@f@d@c_in
 vLFSR_block
 R0
-R6
+!s110 1617560045
 !i10b 1
 !s100 DShf[E0M9Tk4SbA;4OHl?1
 IELz[e<^idUl`F4`T^Ej9@3
@@ -145,7 +145,7 @@ R4
 r1
 !s85 0
 31
-!s108 1617560045.261000
+!s108 1617561111.660000
 !s107 C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv|
 !i113 1

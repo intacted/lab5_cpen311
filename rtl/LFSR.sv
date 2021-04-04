@@ -25,10 +25,11 @@ parameter [2:0] run		=3'b0_01;
 always_ff @( posedge clk or posedge reset ) begin
 	if (reset) begin
 		state <= start;
+	end
 	else
 		case (state)
-			start: 	state <= run
-			run:	state <= run 
+			start: 	state <= run;
+			run:	state <= run;
 			default:state <= start; 
 		endcase
 end
