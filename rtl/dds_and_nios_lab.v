@@ -459,7 +459,7 @@ fast_to_slow #(1) mod3(
 //LSFR generator
 LFSR_block LFSR(
 	.clk(lfsr_clk), 		//CLOCK_1),
-	.reset(1'b1),
+	.reset(1'b0),
 	.q(LFSR) 				//LSFR_out)
 	
 );

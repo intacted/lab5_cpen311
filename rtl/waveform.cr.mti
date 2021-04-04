@@ -1,9 +1,9 @@
-{C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/LFSR.sv}
+{C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/lsfr_TB.sv}
 Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
--- Compiling module LFSR_block
+-- Compiling module lsfr_TB
 
 Top level modules:
-	LFSR_block
+	lsfr_TB
 
 } {} {}} {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Mark Lee-PC/Documents/GitHub/lab5_cpen311/rtl/Nbit_register_async_reset.sv}
 Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
