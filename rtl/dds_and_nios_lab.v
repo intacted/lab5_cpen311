@@ -270,8 +270,8 @@ assign VGA_BLANK_N=vga_de;
 assign VGA_CLK=video_clk_40Mhz;
 assign VGA_SYNC_N=1'b1 & SW[1];
 
-logic lfsr_clk;
-logic [4:0]LFSR;
+logic lfsr_clk;				// &?&	use this instead of CLOCK_1
+logic [4:0]LFSR;			// &?&	use this instead of LFSR_out
 logic [31:0] dds_increment;
 
 /// NIOS II Qsys
@@ -333,25 +333,40 @@ DE1_SoC_QSYS U0(
 	
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_modulation;
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
-logic [4:0]LSFR_out;
-logic CLOCK_1;
+
+//logic [4:0]LSFR_out;
+//logic CLOCK_1;
 logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave,LFSR_display;
 
 //32'h17D7840 >> 1
 
+logic CLOCK_200Hz;
+
 clock_divider clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
-	.outclk(CLOCK_1), 		
+	.outclk(lfsr_clk), 			//CLOCK_1), 		
 	.outclk_Not(), 
 	.div_clk_count (32'h17D7840 >> 1) ,  	// Half-period tick count for frequency
 	.Reset(1'b0)
 );
+
+clock_divider clk_divide_200Hz(
+	.inclk(CLOCK_50), 			// Put in CLK_50M
+	.outclk(CLOCK_200Hz), 					
+	.outclk_Not(), 
+	.div_clk_count (32'h1E848) ,  	// Half-period tick count for frequency
+	.Reset(1'b0)
+);
+
 //create a waveform gen
 waveform_gen wavegen (
+	// Inputs
 	.clk(CLOCK_50),
 	.reset(1'b1),	//reset key unknown
 	.en(1'b1),		//enable
 	.phase_inc(32'd258),
+
+	// Outputs 
 	.sin_out(sin_wave),
 	.cos_out(cos_wave),
 	.squ_out(squ_wave),
@@ -362,8 +377,10 @@ waveform_gen wavegen (
 mux4to1 wave_sel(
 	.a(sin_wave),	
 	.b(cos_wave),	
-	.c(squ_wave),	
-	.d(saw_wave),	
+	.c(saw_wave),	
+	.d(squ_wave),	
+
+	// Select for bottom
 	.sel(signal_selector[1:0]),
 	
 	.out(sel_wave)
@@ -372,10 +389,13 @@ mux4to1 wave_sel(
 mux4to1 signal_out(
 	.a(sin_wave),	
 	.b(cos_wave),	
-	.c(squ_wave),	
-	.d(saw_wave),	
+	.c(saw_wave),	
+	.d(squ_wave),	
+
+	// Select for bottom
 	.sel(signal_selector[1:0]),	
 	
+	// Output to bottom
 	.out(actual_selected_signal)
 );
 
@@ -384,20 +404,45 @@ mux4to1	modul_out(
 	.b(BPSK),	
 	.c(LFSR_display	),	
 	.d(),	
+
+	// Select for top
 	.sel(modulation_selector[1:0]),	
 	
-	.out(actual_selected_modulation)
+	// Output to top
+	.out(actual_selected_modulation)	
 );
 
-assign ASK = LSFR_out[0] ? sel_wave : 12'b0;
-assign BPSK = LSFR_out[0] ? (~sel_wave+1) : sel_wave;
-assign LFSR_display = LSFR_out[0] ? 12'b1000_0000_0000 : 12'b0;
+assign ASK = LSFR_mod ? sel_wave : 12'b0;
+assign BPSK = LSFR_mod ? (~sel_wave + 1) : sel_wave;  			
+assign LFSR_display = LSFR_mod ? 12'b1000_0000_0000 : 12'b0;
+
+logic LSFR_mod;
+slow_to_fast #(1) mod1(
+    .clk1(lfsr_clk), 				//CLOCK_1),
+    .clk2(CLOCK_50),                //CLOCK_50),
+    .in(LFSR[0]),					//LSFR_out[0]),
+	 
+    .out(LSFR_mod)
+);
+
+/*
+logic mod2;
+slow_to_fast mod1(
+    .clk1(CLOCK_200Hz), 			//CLOCK_1),
+    .clk2(CLOCK_50),                //CLOCK_50),
+    .in(LFSR),						//LSFR_out[0]),
+	 
+    .out(LSFR_mod)
+);
+*/
+
+//singal 200hz, dds 50Mhz
 
 //LSFR generator
 lsfr_generic lsfr(
-	.clk(CLOCK_1),
+	.clk(lfsr_clk), 		//CLOCK_1),
 	.reset(1'b1),
-	.q(LSFR_out)
+	.q(LFSR) 				//LSFR_out)
 	
 );
 

@@ -13,7 +13,7 @@ always_comb begin
         2'b01:  out <=  b;
         2'b10:  out <=  c;
         2'b11:  out <=  d;
-        default: out <=12'b0;
+        default: out <= 12'b0;
     endcase
     
 end

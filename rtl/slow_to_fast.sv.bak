@@ -1,0 +1,64 @@
+module slow_to_fast(
+    input clk1,clk2,in,
+    output logic out
+);
+
+logic w_reg2,w_reg3,ff1_ff2,ff2_reg3;
+
+	FDC #(1) reg1 
+	(
+		.clk(clk1),
+		.reset(),
+		.d(in),
+		.q(w_reg3)
+	);
+
+    	FDC #(1) reg2 
+	(
+		.clk(clk2),
+		.reset(),
+		.d(w_reg2),
+		.q(out)
+	);
+
+    	FDC #(1) first 
+	(
+		.clk(~clk2),
+		.reset(),
+		.d(clk1),
+		.q(ff1_ff2)
+	);
+
+        FDC #(1) second 
+	(
+		.clk(clk2),
+		.reset(),
+		.d(feedback),
+		.q(ff2_reg3)
+	);
+
+        	FDC_en #(1) reg3 
+	(
+		.clk(clk2),
+        .en(ff2_reg3)
+		.reset(),
+		.d(w_reg3),
+		.q(w_reg2)
+	);
+
+endmodule
+
+module FDC_en
+	#(parameter N = 4) 
+	(input logic clk,
+     input logic en,
+	 input logic reset,
+	 input logic [N-1:0] d,
+	 output logic [N-1:0] q);
+	
+	// asynchronous
+	always_ff @(posedge clk, posedge reset)
+		if (reset) q <= 0;
+        if (en)
+		    else q <= d;
+endmodule

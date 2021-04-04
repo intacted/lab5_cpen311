@@ -42,9 +42,9 @@ module lsfr_generic
 
 	// Defining states
 	enum int unsigned { 
-		START = 1,
-		ENABLE_FF = 2,
-		RUN = 3
+		START = 0,
+		ENABLE_FF = 1,
+		RUN = 2
 	} state, next_state;
 
 	// Defining next_state order

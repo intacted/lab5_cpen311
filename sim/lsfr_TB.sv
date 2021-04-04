@@ -24,13 +24,13 @@ module lsfr_TB;
 		begin
 			//reset <= 1'b1;
 
-			reset <= 1'b0;
+			reset <= 1'b1;
 			//reset_ff <= 1'b1;
 
 			#clock_scale;
 
 			//reset_ff <= 1'b0;
-			reset <= 1'b0;
+			//reset <= 1'b0;
 
 			#clock_scale;
 			
