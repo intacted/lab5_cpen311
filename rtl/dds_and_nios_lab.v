@@ -275,7 +275,7 @@ logic [4:0]LFSR;			// &?&	use this instead of LFSR_out
 logic [31:0] dds_increment;
 
 logic lfsr_clk_interrupt_gen_external_connection_export;
-logic [31:0] lfsr_val_external_connection_export, dds_increment_external_connection_export;
+logic [31:0] lfsr_val_external_connection_export; //, dds_increment_external_connection_export;
 
 /// NIOS II Qsys
 
@@ -315,7 +315,7 @@ DE1_SoC_QSYS U0(
 	   //PIO
 	   .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk_interrupt_gen_external_connection_export),
 	   .lfsr_val_external_connection_export(lfsr_val_external_connection_export), 
-	   .dds_increment_external_connection_export(dds_increment_external_connection_export),
+	   .dds_increment_external_connection_export(dds_increment), //_external_connection_export),
 		
 		
 		//interfaces

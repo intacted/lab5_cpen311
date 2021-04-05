@@ -22,6 +22,7 @@ void handle_lfsr_interrupts(void* context, alt_u32 id)
 	#ifdef LFSR_VAL_BASE
 	#ifdef LFSR_CLK_INTERRUPT_GEN_BASE
 	#ifdef DDS_INCREMENT_BASE
+
 	int one_hz=86;
 	int five_hz=430;
 	IORD_ALTERA_AVALON_PIO_DATA(LFSR_VAL_BASE);
