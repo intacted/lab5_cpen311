@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="14.1" fabric="QSYS">
  <!-- Format version 14.1 186 (Future versions may contain additional information.) -->
- <!-- 2021.04.04.17:11:27 -->
+ <!-- 2021.04.04.18:35:39 -->
  <!-- A collection of modules and connections -->
  <parameter name="DESIGN_HASH">
   <type>java.lang.String</type>
-  <value>5efaa564f93474451854</value>
+  <value>123a06b87660aff0df70</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -3083,7 +3083,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>5efaa564f93474451854</value>
+   <value>123a06b87660aff0df70</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

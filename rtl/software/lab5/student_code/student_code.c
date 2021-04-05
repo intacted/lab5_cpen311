@@ -21,6 +21,14 @@ void handle_lfsr_interrupts(void* context, alt_u32 id)
 	#ifdef LFSR_CLK_INTERRUPT_GEN_BASE
 	#ifdef DDS_INCREMENT_BASE
 	
+	// (a) read the LFSR value and check bit 0.
+
+	// if (LFSR[0] == 0) {
+	// 1 Hz tuning word to dds_increment
+	// else
+	// 5 Hz tuning word to dds_increment
+	// (c) Reset the edge capture mechanism
+
 	#endif
 	#endif
 	#endif

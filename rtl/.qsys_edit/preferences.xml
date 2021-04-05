@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="271" />
+   <irq preferredWidth="34" />
+   <export preferredWidth="239" />
+   <description preferredWidth="260" />
+   <name preferredWidth="189" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Project,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library" />
+ <window width="2418" height="1318" x="2391" y="41" />
+</preferences>

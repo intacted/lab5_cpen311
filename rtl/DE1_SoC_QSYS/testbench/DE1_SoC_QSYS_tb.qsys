@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element DE1_SoC_QSYS_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_data_divfrec_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_empty_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_fifo_full_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_fifo_used_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_out_data_audio_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_out_pause_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_out_stop_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_wrclk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio2fifo_0_wrreq_bfm
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_audio_sel_bfm
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_dds_increment_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_div_freq_bfm
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_key_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_keyboard_keys_bfm
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_lfsr_clk_interrupt_gen_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_lfsr_val_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_modulation_selector_bfm
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_mouse_pos_bfm
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_pll_locked_bfm
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_signal_selector_bfm
+   {
+      datum _sortIndex
+      {
+         value = "22";
+         type = "int";
+      }
+   }
+   element DE1_SoC_QSYS_inst_vga_alt_vip_itc_0_clocked_video_bfm
+   {
+      datum _sortIndex
+      {
+         value = "23";
+         type = "int";
+      }
+   }
+   element sdram_my_partner
+   {
+      datum _sortIndex
+      {
+         value = "24";
+         type = "int";
+      }
+   }
+   element sdram_my_partner_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA5F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName">dds_and_nios_lab.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="DE1_SoC_QSYS" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module
+   name="DE1_SoC_QSYS_inst"
+   kind="DE1_SoC_QSYS"
+   version="1.0"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="DE1_SoC_QSYS" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_data_divfrec_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_empty_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_fifo_full_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_fifo_used_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="12" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_out_data_audio_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_out_pause_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_out_stop_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_wrclk_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio2fifo_0_wrreq_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_audio_sel_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_dds_increment_external_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_div_freq_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_key_external_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="4" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_keyboard_keys_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_lfsr_clk_interrupt_gen_external_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_lfsr_val_external_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_modulation_selector_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="4" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_mouse_pos_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_pll_locked_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_reset_bfm"
+   kind="altera_avalon_reset_source"
+   version="14.1"
+   enabled="1">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_signal_selector_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="DE1_SoC_QSYS_inst_vga_alt_vip_itc_0_clocked_video_bfm"
+   kind="altera_conduit_bfm"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">output,input,input,input,input,input,input,input,input</parameter>
+  <parameter name="SIGNAL_ROLES">vid_clk,vid_data,underflow,vid_datavalid,vid_v_sync,vid_h_sync,vid_f,vid_h,vid_v</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,24,1,1,1,1,1,1,1" />
+ </module>
+ <module
+   name="sdram_my_partner"
+   kind="altera_sdram_partner_module"
+   version="11.0"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="CAS_LATENCY" value="3" />
+  <parameter name="CONTR_NAME" value="DE1_SoC_QSYS_sdram" />
+  <parameter name="SDRAM_BANK_WIDTH" value="2" />
+  <parameter name="SDRAM_COL_WIDTH" value="10" />
+  <parameter name="SDRAM_DATA_WIDTH" value="16" />
+  <parameter name="SDRAM_NUM_CHIPSELECTS" value="1" />
+  <parameter name="SDRAM_ROW_WIDTH" value="13" />
+ </module>
+ <module
+   name="sdram_my_partner_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="14.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="142857142" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <connection
+   kind="clock"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_clk_bfm.clk"
+   end="DE1_SoC_QSYS_inst.clk" />
+ <connection
+   kind="clock"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_clk_bfm.clk"
+   end="DE1_SoC_QSYS_inst_reset_bfm.clk" />
+ <connection
+   kind="clock"
+   version="14.1"
+   start="sdram_my_partner_clk_bfm.clk"
+   end="sdram_my_partner.clk" />
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_data_divfrec_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_data_divfrec">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_empty_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_empty">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_fifo_full_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_fifo_full">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_fifo_used_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_fifo_used">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_out_data_audio_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_out_data_audio">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_out_pause_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_out_pause">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_out_stop_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_out_stop">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_wrclk_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_wrclk">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio2fifo_0_wrreq_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio2fifo_0_wrreq">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_audio_sel_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.audio_sel">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_dds_increment_external_connection_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.dds_increment_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_div_freq_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.div_freq">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_key_external_connection_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.key_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_keyboard_keys_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.keyboard_keys">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_lfsr_clk_interrupt_gen_external_connection_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.lfsr_clk_interrupt_gen_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_lfsr_val_external_connection_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.lfsr_val_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_modulation_selector_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.modulation_selector">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_mouse_pos_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.mouse_pos">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_pll_locked_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.pll_locked">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="sdram_my_partner.conduit"
+   end="DE1_SoC_QSYS_inst.sdram_wire">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_signal_selector_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.signal_selector">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_vga_alt_vip_itc_0_clocked_video_bfm.conduit"
+   end="DE1_SoC_QSYS_inst.vga_alt_vip_itc_0_clocked_video">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="14.1"
+   start="DE1_SoC_QSYS_inst_reset_bfm.reset"
+   end="DE1_SoC_QSYS_inst.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

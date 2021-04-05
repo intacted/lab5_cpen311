@@ -274,6 +274,9 @@ logic lfsr_clk;				// &?&	use this instead of CLOCK_1
 logic [4:0]LFSR;			// &?&	use this instead of LFSR_out
 logic [31:0] dds_increment;
 
+logic lfsr_clk_interrupt_gen_external_connection_export;
+logic [31:0] lfsr_val_external_connection_export, dds_increment_external_connection_export;
+
 /// NIOS II Qsys
 
 DE1_SoC_QSYS U0( 
@@ -308,6 +311,11 @@ DE1_SoC_QSYS U0(
 	   .audio2fifo_0_out_stop_export                  (STOP),                  //           audio2fifo_0_out_stop.export
 	   .audio2fifo_0_wrclk_export                     (WRCLK),                     //              audio2fifo_0_wrclk.export
 	   .audio2fifo_0_wrreq_export                     (WRREQ),                   //              audio2fifo_0_wrreq.export
+
+	   //PIO
+	   .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk_interrupt_gen_external_connection_export),
+	   .lfsr_val_external_connection_export(lfsr_val_external_connection_export), 
+	   .dds_increment_external_connection_export(dds_increment_external_connection_export),
 		
 		
 		//interfaces
