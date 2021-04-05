@@ -24,6 +24,7 @@ void handle_lfsr_interrupts(void* context, alt_u32 id)
 	#ifdef DDS_INCREMENT_BASE
 	int one_hz=86;
 	int five_hz=430;
+	IORD_ALTERA_AVALON_PIO_DATA(LFSR_VAL_BASE);
 	// (a) read the LFSR value and check bit 0.
 	if (LFSR_VAL_BASE&1) {//check if bit is 0
 		DDS_INCREMENT_BASE=five_hz;//num
@@ -32,6 +33,7 @@ void handle_lfsr_interrupts(void* context, alt_u32 id)
 	IORD_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE);
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE, 0);
 	IORD_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE);
+	IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE);
 	// 1 Hz tuning word to dds_increment
 	// else
 	// 5 Hz tuning word to dds_increment
