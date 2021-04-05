@@ -1,7 +1,6 @@
 `timescale 1ns/1ns
 
 module waveform_gen_TB;
-	parameter clock_scale = 1;
 
 	logic clk;
 	logic reset;
@@ -16,7 +15,7 @@ module waveform_gen_TB;
 		.clk(clk),
 		.reset(reset),	//reset key unknown
 		.en(1'b1),		//enable
-		.phase_inc(32'hFFFF_FFFF),
+		.phase_inc(32'd42950),
 
 		// Outputs 
 		.sin_out(sin_wave),
@@ -24,23 +23,25 @@ module waveform_gen_TB;
 		.squ_out(squ_wave),
 		.saw_out(saw_wave)
 	);
+	initial begin
+    clk=0;
+    #5;
+    forever begin
+        clk=1;
+        #5;
+        clk=0;
+        #5;
+    end
+end
 
-	initial
-		begin
-			reset <= 1; 
-
-			#clock_scale;
-
-			reset <= 0; 
-
-			#clock_scale;
-
-		end
-	
-	always
-		begin
-			clk <=1; #clock_scale;
-			clk <=0; #clock_scale;
-		end
+initial begin
+	reset=1'b1;
+	#5
+	reset=1'b0;
+	#5
+	reset=1'b1;
+	#100000;
+	$stop;
+end
 
 endmodule
