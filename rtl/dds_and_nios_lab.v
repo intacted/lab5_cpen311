@@ -311,7 +311,7 @@ DE1_SoC_QSYS U0(
 
 	   //PIO
 	   .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk),
-	   .lfsr_val_external_connection_export(LFSR[0]), 
+	   .lfsr_val_external_connection_export(LFSR_mod),//LFSR[0]), 
 	   .dds_increment_external_connection_export(dds_increment), 
 		
 		
@@ -340,22 +340,25 @@ DE1_SoC_QSYS U0(
 (* keep = 1, preserve = 1 *) logic [11:0] actual_selected_signal;
 
 logic [11:0] ASK,BPSK,sel_wave,sin_wave,cos_wave,squ_wave,saw_wave,LFSR_display;
-
+logic [11:0] select_mod_sync;
 logic CLOCK_200Hz;
+
+logic [31:0] phase_inc;
+assign phase_inc = (modulation_selector[1:0] === 2'b01) ? dds_increment : 32'd258;
 
 generate_clk32 clk_divide_1MHZ(
 	.inclk(CLOCK_50), 			// Put in CLK_50M
 	.outclk(lfsr_clk), 			// 1Hz clock		
 	.outclk_Not(), 
-	.div_clk_count (32'h17D7840 /*>> 1*/) ,  	// Half-period tick count for frequency
+	.div_clk_count (32'h17D7840 /*>> 1*/),  	// Half-period tick count for frequency
 	.reset(1'b1)
 );
 
 generate_clk32 clk_divide_200Hz(
-	.inclk(CLOCK_50), 			// Put in CLK_50M
+	.inclk(CLOCK_50), 				// Put in CLK_50M
 	.outclk(CLOCK_200Hz), 					
 	.outclk_Not(), 
-	.div_clk_count (32'h1E848) ,  	// Half-period tick count for frequency
+	.div_clk_count (32'h1E848),  	// Half-period tick count for frequency
 	.reset(1'b1)
 );
 
@@ -363,9 +366,9 @@ generate_clk32 clk_divide_200Hz(
 waveform_gen wavegen (
 	// Inputs
 	.clk(CLOCK_50),
-	.reset(1'b1),	//reset key unknown
-	.en(1'b1),		//enable
-	.phase_inc(32'd258),
+	.reset(1'b1),			//reset key unknown
+	.en(1'b1),				//enable
+	.phase_inc(phase_inc),
 
 	// Outputs 
 	.sin_out(sin_wave),
@@ -374,66 +377,51 @@ waveform_gen wavegen (
 	.saw_out(saw_wave)
 );
 
-
+// Select for bottom
 mux4to1 wave_sel(
 	.a(sin_wave),	
 	.b(cos_wave),	
 	.c(saw_wave),	
 	.d(squ_wave),	
-
-	// Select for bottom
 	.sel(signal_selector[1:0]),
 	
 	.out(sel_wave)
 );
 
-//assign actual_selected_signal = sel_wave;
-
-logic [11:0] select_mod_sync;
-
-logic [11:0] select_sync;
-
-logic LSFR_mod;
-
+// Select for top
 mux4to1 modul_out(
     .a(ASK),
-    .b(dds_increment), // FSK
-    .c(BPSK    ),
+    .b(sin_wave), // FSK
+    .c(BPSK),
     .d(LFSR_display),
-
-    // Select for top
     .sel(modulation_selector[1:0]),
 
-    // Output to top
     .out(select_mod_sync)
-    //.out(actual_selected_modulation)
 );
 
-// modulate with sin
+// Modulate with sin
 assign ASK = LFSR[0] ? sin_wave : 12'b0;						
-assign BPSK = LFSR[0] ? (~sin_wave + 1) : sin_wave;  			
+assign BPSK = LFSR[0] ? (~sin_wave /*+ 1*/) : sin_wave;  	// Lab instruction says 2's compliment, solution provided does otherwise		
 assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
 
-// modulate with whatever
+// Modulate with whatever
 //assign ASK = LFSR[0] ? sel_wave : 12'b0;						
 //assign BPSK = LFSR[0] ? (~sel_wave + 1) : sel_wave;  			
 //assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
 
 logic LFSR_mod;
-slow_to_fast #(1) mod1(
-    .clk1(lfsr_clk), 				//CLOCK_1),
-    .clk2(CLOCK_50),                //CLOCK_50),
-    .in(LFSR[0]),					//LSFR_out[0]),
+slow_to_fast #(1) mod1(		// this module appears to be redundant
+    .clk1(lfsr_clk), 		// 1Hz clock		
+    .clk2(CLOCK_50),                
+    .in(LFSR[0]),					
 	 
     .out(LFSR_mod)
 );
 
-
-//singal 200hz, dds 50Mhz
 fast_to_slow #(12) mod2(
     .clk1(CLOCK_50), 			
     .clk2(CLOCK_200Hz),                
-    .in(sel_wave), //select_sync),						
+    .in(sel_wave), 						
 	 
     .out(actual_selected_signal)
 );
@@ -446,13 +434,11 @@ fast_to_slow #(12) mod3(
     .out(actual_selected_modulation)
 );
 
-
 //LSFR generator
 LFSR_block LSFR_module(
-	.clk(lfsr_clk/*lfsr_clk*/), 		//CLOCK_1),
+	.clk(lfsr_clk), 		// 1Hz clock
 	.reset(1'b0),
-	.q(LFSR) 				//LSFR_out)
-	
+	.q(LFSR) 				
 );
 
 ////////////////////////////////////////////////////////////////////

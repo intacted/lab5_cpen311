@@ -35,6 +35,11 @@
    }
    element audio.data_fregen_s1
    {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
       datum baseAddress
       {
          value = "134222272";
@@ -57,6 +62,14 @@
          type = "String";
       }
    }
+   element audio.fifo_used
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
    element audio.fifo_used_s1
    {
       datum baseAddress
@@ -67,6 +80,11 @@
    }
    element audio.out_data_audio_s1
    {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
       datum baseAddress
       {
          value = "134222208";
@@ -83,6 +101,11 @@
    }
    element audio.out_stop_s1
    {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
       datum baseAddress
       {
          value = "134222176";
@@ -91,9 +114,14 @@
    }
    element audio.wrclk_s1
    {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
       datum baseAddress
       {
-         value = "134222048";
+         value = "134222000";
          type = "String";
       }
    }
@@ -101,7 +129,7 @@
    {
       datum baseAddress
       {
-         value = "134222032";
+         value = "134221984";
          type = "String";
       }
    }
@@ -165,7 +193,7 @@
    {
       datum baseAddress
       {
-         value = "134221984";
+         value = "134222016";
          type = "String";
       }
    }
@@ -245,7 +273,7 @@
    {
       datum baseAddress
       {
-         value = "134222016";
+         value = "134222048";
          type = "String";
       }
    }
@@ -261,7 +289,7 @@
    {
       datum baseAddress
       {
-         value = "134222000";
+         value = "134222032";
          type = "String";
       }
    }
@@ -583,7 +611,7 @@
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="dataAddrWidth" value="28" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' /><slave name='cpu.jtag_debug_module' start='0x8000800' end='0x8001000' /><slave name='vga_alt_vip_vfr_0.avalon_slave' start='0x8001000' end='0x8001080' /><slave name='timer.s1' start='0x8001080' end='0x80010A0' /><slave name='dds_increment.s1' start='0x80010A0' end='0x80010B0' /><slave name='lfsr_val.s1' start='0x80010B0' end='0x80010C0' /><slave name='lfsr_clk_interrupt_gen.s1' start='0x80010C0' end='0x80010D0' /><slave name='audio_WRREQ.s1' start='0x80010D0' end='0x80010E0' /><slave name='audio_WRCLK.s1' start='0x80010E0' end='0x80010F0' /><slave name='audio_sel.s1' start='0x80010F0' end='0x8001100' /><slave name='div_freq.s1' start='0x8001100' end='0x8001110' /><slave name='mouse_pos.s1' start='0x8001110' end='0x8001120' /><slave name='keyboard_keys.s1' start='0x8001120' end='0x8001130' /><slave name='modulation_selector.s1' start='0x8001130' end='0x8001140' /><slave name='signal_selector.s1' start='0x8001140' end='0x8001150' /><slave name='key.s1' start='0x8001150' end='0x8001160' /><slave name='audio_OUT_STOP.s1' start='0x8001160' end='0x8001170' /><slave name='audio_OUT_PAUSE.s1' start='0x8001170' end='0x8001180' /><slave name='audio_OUT_DATA_AUDIO.s1' start='0x8001180' end='0x8001190' /><slave name='audio_fifo_used.s1' start='0x8001190' end='0x80011A0' /><slave name='audio_FIFO_FULL.s1' start='0x80011A0' end='0x80011B0' /><slave name='audio_EMPTY.s1' start='0x80011B0' end='0x80011C0' /><slave name='audio_DATA_FREGEN.s1' start='0x80011C0' end='0x80011D0' /><slave name='sysid_qsys.control_slave' start='0x80011D0' end='0x80011D8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x80011D8' end='0x80011E0' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' /><slave name='cpu.jtag_debug_module' start='0x8000800' end='0x8001000' /><slave name='vga_alt_vip_vfr_0.avalon_slave' start='0x8001000' end='0x8001080' /><slave name='timer.s1' start='0x8001080' end='0x80010A0' /><slave name='audio_WRREQ.s1' start='0x80010A0' end='0x80010B0' /><slave name='audio_WRCLK.s1' start='0x80010B0' end='0x80010C0' /><slave name='dds_increment.s1' start='0x80010C0' end='0x80010D0' /><slave name='lfsr_val.s1' start='0x80010D0' end='0x80010E0' /><slave name='lfsr_clk_interrupt_gen.s1' start='0x80010E0' end='0x80010F0' /><slave name='audio_sel.s1' start='0x80010F0' end='0x8001100' /><slave name='div_freq.s1' start='0x8001100' end='0x8001110' /><slave name='mouse_pos.s1' start='0x8001110' end='0x8001120' /><slave name='keyboard_keys.s1' start='0x8001120' end='0x8001130' /><slave name='modulation_selector.s1' start='0x8001130' end='0x8001140' /><slave name='signal_selector.s1' start='0x8001140' end='0x8001150' /><slave name='key.s1' start='0x8001150' end='0x8001160' /><slave name='audio_OUT_STOP.s1' start='0x8001160' end='0x8001170' /><slave name='audio_OUT_PAUSE.s1' start='0x8001170' end='0x8001180' /><slave name='audio_OUT_DATA_AUDIO.s1' start='0x8001180' end='0x8001190' /><slave name='audio_fifo_used.s1' start='0x8001190' end='0x80011A0' /><slave name='audio_FIFO_FULL.s1' start='0x80011A0' end='0x80011B0' /><slave name='audio_EMPTY.s1' start='0x80011B0' end='0x80011C0' /><slave name='audio_DATA_FREGEN.s1' start='0x80011C0' end='0x80011D0' /><slave name='sysid_qsys.control_slave' start='0x80011D0' end='0x80011D8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x80011D8' end='0x80011E0' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -1305,7 +1333,7 @@
    start="cpu.data_master"
    end="lfsr_clk_interrupt_gen.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x080010c0" />
+  <parameter name="baseAddress" value="0x080010e0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1314,7 +1342,7 @@
    start="cpu.data_master"
    end="lfsr_val.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x080010b0" />
+  <parameter name="baseAddress" value="0x080010d0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1323,7 +1351,7 @@
    start="cpu.data_master"
    end="dds_increment.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x080010a0" />
+  <parameter name="baseAddress" value="0x080010c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1341,7 +1369,7 @@
    start="cpu.data_master"
    end="audio.wrclk_s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x080010e0" />
+  <parameter name="baseAddress" value="0x080010b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1350,7 +1378,7 @@
    start="cpu.data_master"
    end="audio.wrreq_s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x080010d0" />
+  <parameter name="baseAddress" value="0x080010a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection

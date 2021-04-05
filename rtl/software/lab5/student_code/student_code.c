@@ -11,10 +11,8 @@
 #include "student_code.h"
 #include "altera_avalon_pio_regs.h"
 
-
 #ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
 void handle_lfsr_interrupts(void* context)
-
 #else
 void handle_lfsr_interrupts(void* context, alt_u32 id)
 #endif
@@ -23,19 +21,26 @@ void handle_lfsr_interrupts(void* context, alt_u32 id)
 	#ifdef LFSR_CLK_INTERRUPT_GEN_BASE
 	#ifdef DDS_INCREMENT_BASE
 
-	IORD_ALTERA_AVALON_PIO_DATA(LFSR_VAL_BASE);
-	// (a) read the LFSR value and check bit 0.
-	if (LFSR_VAL_BASE)										//(LFSR_VAL_BASE&1) //check if bit is 0
-		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE,430 );//num
+	volatile int LFSR; // variable value can be changed any time
+
+	// (a) Read the LFSR value and check bit 0.
+	LFSR = IORD_ALTERA_AVALON_PIO_DATA(LFSR_VAL_BASE);
+
+	//printf("Done A");
+
+	// (b) Set the frequency
+	if (LFSR)
+		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE, 430);
 	else
-		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE,86 );//num
+		IOWR_ALTERA_AVALON_PIO_DATA(DDS_INCREMENT_BASE, 86);
 
-	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE, 0);
+	//printf("Done B");
 
-	// 1 Hz tuning word to dds_increment
-	// else
-	// 5 Hz tuning word to dds_increment
 	// (c) Reset the edge capture mechanism
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE, 0);
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(LFSR_CLK_INTERRUPT_GEN_BASE);
+
+	//printf("Done C");
 
 	#endif
 	#endif

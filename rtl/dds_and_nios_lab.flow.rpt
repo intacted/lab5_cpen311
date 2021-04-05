@@ -1,5 +1,5 @@
 Flow report for dds_and_nios_lab
-Sun Apr 04 23:09:00 2021
+Mon Apr 05 02:10:55 2021
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Sun Apr 04 23:08:34 2021      ;
+; Flow Status                     ; Successful - Mon Apr 05 02:10:29 2021      ;
 ; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                   ; dds_and_nios_lab                           ;
 ; Top-level Entity Name           ; dds_and_nios_lab                           ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CSEMA5F31C6                               ;
 ; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 5,612 / 32,070 ( 17 % )                    ;
-; Total registers                 ; 8713                                       ;
+; Logic utilization (in ALMs)     ; 5,601 / 32,070 ( 17 % )                    ;
+; Total registers                 ; 8716                                       ;
 ; Total pins                      ; 241 / 457 ( 53 % )                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 183,312 / 4,065,280 ( 5 % )                ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/04/2021 23:02:24 ;
+; Start date & time ; 04/05/2021 02:02:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; dds_and_nios_lab    ;
 +-------------------+---------------------+
@@ -81,7 +81,7 @@ agreement for further details.
 +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+------------------+
 ; ALLOW_POWER_UP_DONT_CARE                          ; Off                                                                                                                             ; On                 ; --           ; --               ;
 ; BLOCK_RAM_AND_MLAB_EQUIVALENT_POWER_UP_CONDITIONS ; Care                                                                                                                            ; Auto               ; --           ; --               ;
-; COMPILER_SIGNATURE_ID                             ; 39908809259501.161760254321256                                                                                                  ; --                 ; --           ; --               ;
+; COMPILER_SIGNATURE_ID                             ; 39908809259501.161761337616568                                                                                                  ; --                 ; --           ; --               ;
 ; ENABLE_IP_DEBUG                                   ; On                                                                                                                              ; Off                ; --           ; --               ;
 ; ENABLE_SIGNALTAP                                  ; On                                                                                                                              ; --                 ; --           ; --               ;
 ; EXTRACT_VERILOG_STATE_MACHINES                    ; Off                                                                                                                             ; On                 ; --           ; --               ;
@@ -109,7 +109,7 @@ agreement for further details.
 ; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.regmap                                                                                      ; --                 ; --           ; --               ;
 ; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.debuginfo                                                                                   ; --                 ; --           ; --               ;
 ; SLD_FILE                                          ; db/stp1_auto_stripped.stp                                                                                                       ; --                 ; --           ; --               ;
-; SLD_INFO                                          ; QSYS_NAME DE1_SoC_QSYS HAS_SOPCINFO 1 GENERATION_ID 1617584032                                                                  ; --                 ; DE1_SoC_QSYS ; --               ;
+; SLD_INFO                                          ; QSYS_NAME DE1_SoC_QSYS HAS_SOPCINFO 1 GENERATION_ID 1617608513                                                                  ; --                 ; DE1_SoC_QSYS ; --               ;
 ; SLD_NODE_CREATOR_ID                               ; 110                                                                                                                             ; --                 ; --           ; auto_signaltap_0 ;
 ; SLD_NODE_ENTITY_NAME                              ; sld_signaltap                                                                                                                   ; --                 ; --           ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT                     ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                                         ; --                 ; --           ; auto_signaltap_0 ;
@@ -151,11 +151,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:07     ; 4.2                     ; 5387 MB             ; 00:03:19                           ;
-; Fitter                    ; 00:04:40     ; 4.1                     ; 8623 MB             ; 00:14:46                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 4956 MB             ; 00:00:11                           ;
-; TimeQuest Timing Analyzer ; 00:00:25     ; 3.1                     ; 5935 MB             ; 00:01:02                           ;
-; Total                     ; 00:06:23     ; --                      ; --                  ; 00:19:18                           ;
+; Analysis & Synthesis      ; 00:01:11     ; 4.4                     ; 5387 MB             ; 00:03:48                           ;
+; Fitter                    ; 00:05:58     ; 4.9                     ; 8715 MB             ; 00:16:35                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 4965 MB             ; 00:00:12                           ;
+; TimeQuest Timing Analyzer ; 00:00:24     ; 2.4                     ; 5939 MB             ; 00:01:01                           ;
+; Total                     ; 00:07:45     ; --                      ; --                  ; 00:21:36                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

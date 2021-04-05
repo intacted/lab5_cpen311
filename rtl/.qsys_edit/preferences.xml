@@ -10,8 +10,7 @@
    <name preferredWidth="189" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library" />
+ <library expandedCategories="Project,Library" />
  <window width="2418" height="1318" x="2391" y="41" />
- <generation mixed_lang_testbench_simulation="0" />
+ <generation mixed_lang_testbench_simulation="0" simulation="VERILOG" />
 </preferences>
