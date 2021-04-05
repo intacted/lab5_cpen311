@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module lsfr_TB;
+module lfsr_TB;
     parameter clock_scale = 5'd20;		// for clk
 
 	// Output
@@ -9,7 +9,7 @@ module lsfr_TB;
 	// -- clock and reset signals  
 	logic clk, reset, reset_ff;										
 	 
-	LFSR_block dut(
+	lfsr_generic dut(
 		// Inputs
 		.clk(clk),
 		.reset(reset),
@@ -18,35 +18,36 @@ module lsfr_TB;
 		// Outputs
 		.q(q)
 	);
-
-	initial begin
-		forever begin
-			clk=0;
-			#5;
-			clk=1;
-			#5;
-		end
-	end
 	 
 
 	initial
 		begin
 			//reset <= 1'b1;
 
-			reset <= 1'b0;
+			reset <= 1'b1;
 			//reset_ff <= 1'b1;
-			#10000;
 
+			#clock_scale;
 
 			//reset_ff <= 1'b0;
 			//reset <= 1'b0;
 
+			#clock_scale;
+			
+			assert(q === 5'b000_01) else $error("Problem at 0");
 
+			#clock_scale;
 
 			/*forever
 			begin
 				// forever loop for testing
 			end*/
+		end
+	
+	always
+		begin
+			clk <=0; #(clock_scale/2);
+			clk <=1; #(clock_scale/2);
 		end
 
 endmodule
