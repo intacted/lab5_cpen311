@@ -390,13 +390,11 @@ logic [11:0] select_sync;
 
 logic LSFR_mod;
 
-
-
 mux4to1 modul_out(
     .a(ASK),
-    .b(LFSR_display),
+    .b(12'hAA0),
     .c(BPSK    ),
-    .d(),
+    .d(LFSR_display),
 
     // Select for top
     .sel(modulation_selector[1:0]),
