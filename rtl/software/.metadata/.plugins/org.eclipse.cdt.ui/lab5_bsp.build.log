@@ -1,6 +1,6 @@
-22:59:33 **** Build of configuration Nios II for project lab5_bsp ****
+21:59:38 **** Build of configuration Nios II for project lab5_bsp ****
 make all 
 [BSP build complete]
 
-22:59:34 Build Finished (took 812ms)
+21:59:38 Build Finished (took 502ms)
 

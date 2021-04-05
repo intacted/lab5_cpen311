@@ -274,9 +274,6 @@ logic lfsr_clk;				// &?&	use this instead of CLOCK_1
 logic [4:0]LFSR;			// &?&	use this instead of LFSR_out
 logic [31:0] dds_increment;
 
-logic lfsr_clk_interrupt_gen_external_connection_export;
-logic [31:0] lfsr_val_external_connection_export; //, dds_increment_external_connection_export;
-
 /// NIOS II Qsys
 
 DE1_SoC_QSYS U0( 
@@ -313,9 +310,9 @@ DE1_SoC_QSYS U0(
 	   .audio2fifo_0_wrreq_export                     (WRREQ),                   //              audio2fifo_0_wrreq.export
 
 	   //PIO
-	   .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk_interrupt_gen_external_connection_export),
-	   .lfsr_val_external_connection_export(lfsr_val_external_connection_export), 
-	   .dds_increment_external_connection_export(dds_increment), //_external_connection_export),
+	   .lfsr_clk_interrupt_gen_external_connection_export(lfsr_clk),
+	   .lfsr_val_external_connection_export(LFSR[0]), 
+	   .dds_increment_external_connection_export(dds_increment), 
 		
 		
 		//interfaces
@@ -400,7 +397,7 @@ logic LSFR_mod;
 
 mux4to1 modul_out(
     .a(ASK),
-    .b(12'hAA0),
+    .b(dds_increment), // FSK
     .c(BPSK    ),
     .d(LFSR_display),
 
@@ -412,9 +409,15 @@ mux4to1 modul_out(
     //.out(actual_selected_modulation)
 );
 
-assign ASK = LFSR[0] ? sin_wave : 12'b0;						// should always be sin according to solution
-assign BPSK = LFSR[0] ? (~sel_wave + 1) : sel_wave;  			
+// modulate with sin
+assign ASK = LFSR[0] ? sin_wave : 12'b0;						
+assign BPSK = LFSR[0] ? (~sin_wave + 1) : sin_wave;  			
 assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
+
+// modulate with whatever
+//assign ASK = LFSR[0] ? sel_wave : 12'b0;						
+//assign BPSK = LFSR[0] ? (~sel_wave + 1) : sel_wave;  			
+//assign LFSR_display = LFSR[0] ? 12'b1000_0000_0000 : 12'b0;
 
 logic LFSR_mod;
 slow_to_fast #(1) mod1(

@@ -1,9 +1,9 @@
-E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/fast_to_slow_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/fast_to_slow_TB.sv
+E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module fast_to_slow_TB
+-- Compiling module FDC
 
 Top level modules:
-	fast_to_slow_TB
+	FDC
 
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v {0 {vlog -work work -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -13,12 +13,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 ** Error: (vlog-13069) E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): near "[": syntax error, unexpected '['.
 ** Error: E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/dds_and_nios_lab.v(206): (vlog-13205) Syntax error found in the scope following 'logic'. Is there a missing '::'?
 
-} {4.0 8.0} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/Nbit_register_async_reset.sv
+} {4.0 8.0} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/fast_to_slow_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/fast_to_slow_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module FDC
+-- Compiling module fast_to_slow_TB
 
 Top level modules:
-	FDC
+	fast_to_slow_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux4to1
+
+Top level modules:
+	mux4to1
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lfsr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lfsr_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lfsr_TB
+
+Top level modules:
+	lfsr_TB
 
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/slow_to_fast.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/slow_to_fast.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -28,12 +42,31 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	slow_to_fast
 
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/mux4to1.sv
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/sincos_lut.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/sincos_lut.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity sincos_lut
+-- Compiling architecture rtl of sincos_lut
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/sincos_lut_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/sincos_lut_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux4to1
+-- Compiling module sincos_lut_TB
 
 Top level modules:
-	mux4to1
+	sincos_lut_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/waveform_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/waveform_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity waveform_gen
+-- Compiling architecture rtl of waveform_gen
 
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/clock_divider.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/clock_divider.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -42,13 +75,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	clock_divider
 
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module clock_divider_TB
-
-Top level modules:
-	clock_divider_TB
-
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lsfr_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module lsfr_TB
@@ -56,18 +82,32 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	lsfr_TB
 
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/waveform_gen_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/waveform_gen_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module waveform_gen_TB
+
+Top level modules:
+	waveform_gen_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/clock_divider_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clock_divider_TB
+
+Top level modules:
+	clock_divider_TB
+
+} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lfsr_ebi.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/lfsr_ebi.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lfsr_generic
+
+Top level modules:
+	lfsr_generic
+
 } {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/LFSR.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/rtl/LFSR.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module LFSR_block
 
 Top level modules:
 	LFSR_block
-
-} {} {}} E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lfsr_TB.sv {1 {vlog -work work -sv -stats=none E:/Courses/CPEN311/Ebi/Labs/lab5_cpen311/sim/lfsr_TB.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lfsr_TB
-
-Top level modules:
-	lfsr_TB
 
 } {} {}}
